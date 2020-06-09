@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>new GASH</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+</head>
+<body>
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu">
+		<span id="showRightClose" class="icon-close"></span>
+		<div class="UserHeader">
+			<img src="images/userheader.png" alt="">
+		</div>
+		<h3>AMY</h3>
+		<a href="javascript:;"><span class="item item01"></span>兌換</a>
+		<a href="javascript:;"><span class="item item02"></span>加點數</a>
+		<a href="javascript:;"><span class="item item03"></span>好友</a>
+		<a href="javascript:;"><span class="item item04"></span>掃描登入</a>
+	</nav>
+	<div class="cbp-spmenu-push">
+		<header>
+			<a href="index.html" class="logo">GASH</a>
+			<nav>
+				<a href="javascript:;" id="" class="icon-mail left">mail</a>
+				<a href="javascript:;" id="showRightPush" class="icon-menu right">open</a>
+			</nav>
+		</header>		
+		<div class="container">
+			<div class="GashPointBox">	
+				<div class="GashPoint animated zoomInUp" style="animation-duration: 1s;animation-iteration-count:1">
+					<span class="SavePointTxt">儲值點數</span>
+					<h1 id="myCounter" class="PointNum" >0</h1>
+				</div>
+				<span class="GashLogo animated fadeInLeft" style="animation-duration: 1s;animation-iteration-count:1"></span>
+				<a href="javascript:;" class="AddButton animated fadeInRight" style="animation-duration: 1s;animation-iteration-count:1"></a>
+				<div class="hello animated bounceInUp" style="animation-duration: 1.5s;animation-iteration-count:1">
+					<p>Hello Amy</p>
+				</div>
+			</div>
+			<div class="SlideArea">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="javascript:;">HOME</a></div>
+						<div class="swiper-slide"><a href="product.html">獨享任務</a></div>
+						<div class="swiper-slide"><a href="product.html">獨享序號</a></div>
+						<div class="swiper-slide"><a href="product.html">刮刮樂</a></div>
+						<div class="swiper-slide"><a href="product.html">BitCash</a></div>
+						<div class="swiper-slide"><a href="product.html">天堂M</a></div>
+						<div class="swiper-slide"><a href="product.html">好康活動</a></div>
+					</div>
+				</div>
+				<div class="slideBar">
+					<div class="slideCenter"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-index">
+		<canvas></canvas>
+	</div>
+	<div class="mask">
+		<p class="animated zoomInUp" style="animation-duration: 1s;animation-iteration-count:1">
+			<span style="font-size: 2em;">OPPS!</span></br>請使用手機瀏覽畫面
+		</p>
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/countUp.min.js"></script>
+<script>
+	//nav選單
+	var menuRight = document.getElementById( 'cbp-spmenu' ),
+	body = document.body;
+	showRightPush.onclick = function() {
+		classie.toggle( this, 'active' );
+		classie.toggle( body, 'cbp-spmenu-blur' );
+		classie.toggle( menuRight, 'cbp-spmenu-open' );
+		disableOther( 'showRightPush' );
+	};
+	showRightClose.onclick = function() {
+		classie.toggle( this, 'active' );
+		classie.toggle( body, 'cbp-spmenu-blur' );
+		classie.toggle( menuRight, 'cbp-spmenu-open' );
+		disableOther( 'showRightPush' );
+	};
+	function disableOther( button ) {
+		if( button !== 'showRightPush' ) {
+			classie.toggle( showRightPush, 'disabled' );
+		}
+		if( button !== 'showRightClose' ) {
+			classie.toggle( showRightPush, 'disabled' );
+		}
+	};
+	//首頁slider
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 3,
+		loop: true,
+		spaceBetween: 10,
+		centeredSlides: true,
+		grabCursor: true,
+	});
+	//首頁儲值點數跑動效果
+	var easingFn = function(t, b, c, d) {
+		var ts = (t /= d) * t;
+		var tc = ts * t;
+		return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t);
+	};
+	var options = {
+		  useEasing: true, 
+		  easingFn: easingFn, 
+		  useGrouping: true, 
+		  separator: ',', 
+		  decimal: '.', 
+	};
+	var counter = new CountUp('myCounter', 0, 1688, 0, 5, options);
+	if (!counter.error) {
+		counter.start();
+	} else {
+		  console.error(counter.error);
+	};
+	//首頁背景動態       
+	var canvas = $('canvas')[0];
+	var context = canvas.getContext('2d');
+	function Dot() {
+		this.alive = true;
+		this.x = Math.round(Math.random() * canvas.width);
+		this.y = Math.round(Math.random() * canvas.height);
+		this.diameter = Math.random() * 10;
+		this.colorIndex = Math.round(Math.random() * 4);
+		this.colorArray = ['rgba(255,255,355,', 'rgba(60,159,7,', 'rgba(232,26,125,', 'rgba(234,161,27,'];
+		this.alpha = 0.1;
+		this.color = this.colorArray[this.colorIndex] + this.alpha + ')';
+		this.velocity = { x: Math.round(Math.random() < 0.9 ? -1 : 1) * Math.random() * 0.7, y: Math.round(Math.random() < 0.5 ? -1 : 1) * Math.random() * 0.7 };
+	}
+
+	Dot.prototype = {
+		Draw: function () {
+			context.fillStyle = this.color; context.beginPath(); context.arc(this.x, this.y, this.diameter, 0, Math.PI * 2, false); context.fill();
+		},
+
+		Update: function () {
+			if (this.alpha < 0.8) {
+				console.log(this.color); this.alpha += 0.01; this.color = this.colorArray[this.colorIndex] + this.alpha + ')'; console.log('===' + this.color);
+			}
+			this.x += this.velocity.x; this.y += this.velocity.y;
+			if (this.x > canvas.width + 5 || this.x < 0 - 5 || this.y > canvas.height + 5 || this.y < 0 - 5) {this.alive = false;}
+		}
+	};
+	var EntityArray = [];
+	function Initialize() {
+		canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+		for (var x = 0; x < 100; x++) { EntityArray.push(new Dot()); }
+			Update();
+	}
+	function Update() {
+		if (EntityArray.length < 100) { for (var x = EntityArray.length; x < 100; x++) { EntityArray.push(new Dot()); } }
+		EntityArray.forEach(function (dot) { dot.Update(); });
+		EntityArray = EntityArray.filter(function (dot) { return dot.alive; });
+		Draw(); requestAnimationFrame(Update);
+	}
+	function Draw() {
+		context.clearRect(0, 0, canvas.width, canvas.height);EntityArray.forEach(function (dot) { dot.Draw(); });
+	}
+	$(window).resize(function () {
+		EntityArray = []; canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+	});
+	Initialize();
+</script>
+
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<title>臺大國際產學聯盟</title>
+	<!-- meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="description" content="世代更迭，台大前瞻全球市場的產業需求，學術研究與市場變遷的察覺如何取得平衡至關重要，加速雙方融合的步伐，將台大的研發能量積極向外推展，藉由產業的拉力，衝撞出更多的能量，無論是藉由區塊鏈、大數據、雲端運算、萬物聯網、人工智慧等技術，將研發能量投入產業界成就最大的綜效。">
+	<meta name="author" content="臺大國際產學聯盟">
+	<meta name="keywords" content="臺大國際產學聯盟">
+	<meta property="og:title" content="臺大國際產學聯盟">
+	<meta property="og:image" content="Content/images/meta.png">
+	<meta property="og:type" content="website">
+	<link rel="apple-touch-icon" href="Content/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Content/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Content/images/apple-touch-icon-114x114.png">
+	<link href="Content/images/favicon.ico" rel="icon" type="image/x-icon">	
+	<!-- css -->
+	<link rel="stylesheet" href="Content/css/bootstrap.min.css">
+	<link rel="stylesheet" href="Content/css/font-awesome.min.css">
+	<link href="Content/css/style.css" rel="stylesheet"/>
+	<link href="Content/css/btd.css" rel="stylesheet"/>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+			<script src="Content/js/html5.js"></script>
+			<script src="Content/js/respond.js"></script>
+		<![endif]
+	-->
+	<!--[if IE 8]>
+	    <script src="Content/js/selectivizr.js"></script>
+	    <![endif]
+	-->
+</head>
+<body>
+	<div id="BtdSearch">
+		<div class="container">
+			<a class="navbar-brand" href="resources.html" title="臺大國際產學聯盟人才智庫">
+				<h1 class="logo-resources"></h1>
+			</a>  
+			<ul class="nav-btd-search navbar-right list-inline">
+				<li>
+					<a href="resources.html">首頁</a>
+				</li>
+				<li>
+					<a href="#modal-BTD" data-toggle="modal">關於BTD</a>
+				</li>
+				<li>
+					<a href="#modal-manage" data-toggle="modal">管理辦法</a>
+				</li>
+				<li>
+					<a href="#modal-contact" data-toggle="modal">聯絡我們</a>
+				</li>
+				<li class="LoginInfoStyle">李世光教授 您好! <a href="login.html" class="LogoutStyle">登出</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="SearchAdvanced" class="container">
+		<div class="thumbnail">
+			<div id="searchNav">
+				<ul class="nav-tabs clearfix">
+					<li>
+						<a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab" onclick="$('#searchNav ul li a').removeClass('click');$(this).addClass('click');" class="click"><i class="fa fa-2x fa-address-card-o"></i>研究人員查詢</a>
+					</li>
+					<li>
+						<a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" onclick="$('#searchNav ul li a').removeClass('click');$(this).addClass('click');"><i class="fa fa-2x fa-file-text-o"></i>研究計畫查詢</a>
+					</li>
+					<li>
+						<a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab" onclick="$('#searchNav ul li a').removeClass('click');$(this).addClass('click');"><i class="fa fa-2x fa-book"></i>期刊論文查詢</a>
+					</li>
+					<li>
+						<a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab" onclick="$('#searchNav ul li a').removeClass('click');$(this).addClass('click');"><i class="fa fa-2x fa-connectdevelop"></i>專利查詢</a>
+					</li>
+				</ul>
+			</div>
+			<div class="input-group">
+				<input type="text" class="form-control input-lg" placeholder="Search">
+				<span class="input-group-btn">
+					<a href="resources-search.html" type="button" class="btn btn-lg btn-ff5f00" title="搜尋">搜尋</a>
+				</span>
+				<span class="input-group-btn">
+					<a href="#" type="button" class="btn btn-lg btn-ff5f00" title="重新整理" style="border-radius: 0 6px 6px 0; border-left:1px solid #999 ;"><i class="fa fa-repeat"></i></a>
+				</span>
+			</div>
+			<hr>
+			<p><i class="fa fa-filter"></i> 智慧搜尋條件</p>			
+			<div class="form-horizontal">
+				<div class="tab-content">
+					<!--研究人員查詢-->
+					<div id="tab1" class="tab-pane fade in active">
+						<div class="search-condition">
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">關鍵字查詢範圍</label>
+								<div class="col-sm-10">
+									<div class="radio">
+										<label class="form-check-label" for="">
+											<input type="radio" class="form-check-input" name="" value=""><label>以人名找人</label>
+										</label>
+										<label class="form-check-label" for="">
+											<input type="radio" class="form-check-input" name="" value=""><label>以主題關鍵字找人</label>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">單位名稱</label>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">專長領域</label>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- 搜尋結果 -->
+						<div>
+							<h2 class="blog-title block-body">搜尋結果</h2>				
+							<div class="search-header">
+								共：<span class="text-ff5f00">10000</span>筆資料，每次顯示
+								<select name="" id="">
+									<option value="">10</option>
+									<option value="">25</option>
+									<option value="">100</option>
+								</select>
+								筆資料
+							</div>
+							<div class="table-responsive">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr class="text-left">
+											<th>姓名</th>
+											<th>單位名稱</th>
+											<th>專兼任</th>
+											<th>職級</th>
+											<th>教授專長</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="text-left">
+											<td>姓名</td>
+											<td>單位名稱</td>
+											<td>專兼任</td>
+											<td>職級</td>
+											<td>教授專長</td>
+										</tr>
+										<tr class="text-left">
+											<td>姓名</td>
+											<td>單位名稱</td>
+											<td>專兼任</td>
+											<td>職級</td>
+											<td>教授專長</td>
+										</tr>
+										<tr class="text-left">
+											<td><a href="#" class="text-ff5f00">姓名</a></td>
+											<td><a href="#" class="text-ff5f00">單位名稱</a></td>
+											<td><a href="#" class="text-ff5f00">專兼任</a></td>
+											<td><a href="#" class="text-ff5f00">職級</a></td>
+											<td><a href="#" class="text-ff5f00">教授專長</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="text-center">
+								<ul class="pagination">
+									<li><a href="#">第一頁</a></li>
+									<li><a href="#">«</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">»</a></li>
+									<li><a href="#">最終頁</a></li>
+								</ul>
+							</div>					
+						</div>
+					</div>
+					<!--研究計畫查詢-->
+					<div id="tab2" class="tab-pane fade">
+						<div class="search-condition">
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">編號查詢</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">計畫年度</label>
+								<div class="col-sm-10">
+									<select name="" class="form-control pull-left" style="width: 200px;">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+									<p class="control-label pull-left text-center" style="margin:0 10px;">至</p>
+									<select name="" class="form-control pull-left" style="width: 200px;">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">研究人員單位</label>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">研究領域</label>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- 搜尋結果 -->
+						<div>
+							<h2 class="blog-title block-body">搜尋結果</h2>				
+							<div class="search-header">
+								共：<span class="text-ff5f00">10000</span>筆資料，每次顯示
+								<select name="" id="">
+									<option value="">10</option>
+									<option value="">25</option>
+									<option value="">100</option>
+								</select>
+								筆資料
+							</div>
+							<div class="table-responsive">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr class="text-left">
+											<th>姓名</th>
+											<th>起始年</th>
+											<th>結束年</th>
+											<th>單位名稱</th>
+											<th>計畫名稱</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="text-left">
+											<td>姓名</td>
+											<td>起始年</td>
+											<td>結束年</td>
+											<td>單位名稱</td>
+											<td>計畫名稱</td>
+										</tr>
+										<tr class="text-left">
+											<td>姓名</td>
+											<td>起始年</td>
+											<td>結束年</td>
+											<td>單位名稱</td>
+											<td>計畫名稱</td>
+										</tr>
+										<tr class="text-left">
+											<td><a href="#" class="text-ff5f00">姓名</a></td>
+											<td><a href="#" class="text-ff5f00">起始年</a></td>
+											<td><a href="#" class="text-ff5f00">結束年</a></td>
+											<td><a href="#" class="text-ff5f00">單位名稱</a></td>
+											<td><a href="#" class="text-ff5f00">計畫名稱</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="text-center">
+								<ul class="pagination">
+									<li><a href="#">第一頁</a></li>
+									<li><a href="#">«</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">»</a></li>
+									<li><a href="#">最終頁</a></li>
+								</ul>
+							</div>					
+						</div>
+					</div>
+					<!--期刊論文查詢-->
+					<div id="tab3" class="tab-pane fade">
+						<div class="search-condition">
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">著作類別</label>
+								<div class="col-sm-6">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">出版年</label>
+								<div class="col-sm-10">
+									<select name="" class="form-control pull-left" style="width: 200px;">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+									<p class="control-label pull-left text-center" style="margin:0 10px;">至</p>
+									<select name="" class="form-control pull-left" style="width: 200px;">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">研究人員單位</label>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- 搜尋結果 -->
+						<div>
+							<h2 class="blog-title block-body">搜尋結果</h2>				
+							<div class="search-header">
+								共：<span class="text-ff5f00">10000</span>筆資料，每次顯示
+								<select name="" id="">
+									<option value="">10</option>
+									<option value="">25</option>
+									<option value="">100</option>
+								</select>
+								筆資料
+							</div>
+							<div class="table-responsive">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr class="text-left">
+											<th>著作</th>
+											<th>科系</th>
+											<th>出版年</th>
+											<th>姓名</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="text-left">
+											<td>著作</td>
+											<td>科系</td>
+											<td>出版年</td>
+											<td>姓名</td>
+										</tr>
+										<tr class="text-left">
+											<td>著作</td>
+											<td>科系</td>
+											<td>出版年</td>
+											<td>姓名</td>
+										</tr>
+										<tr class="text-left">
+											<td><a href="#" class="text-ff5f00">著作</a></td>
+											<td><a href="#" class="text-ff5f00">科系</a></td>
+											<td><a href="#" class="text-ff5f00">出版年</a></td>
+											<td><a href="#" class="text-ff5f00">姓名</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="text-center">
+								<ul class="pagination">
+									<li><a href="#">第一頁</a></li>
+									<li><a href="#">«</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">»</a></li>
+									<li><a href="#">最終頁</a></li>
+								</ul>
+							</div>					
+						</div>
+					</div>
+					<!--專利查詢-->
+					<div id="tab4" class="tab-pane fade">
+						<div class="search-condition">
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="">研究人員單位</label>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+								<div class="col-sm-3">
+									<select name="" class="form-control">
+										<option value="">請選擇</option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- 搜尋結果 -->
+						<div>
+							<h2 class="blog-title block-body">搜尋結果</h2>				
+							<div class="search-header">
+								共：<span class="text-ff5f00">10000</span>筆資料，每次顯示
+								<select name="" id="">
+									<option value="">10</option>
+									<option value="">25</option>
+									<option value="">100</option>
+								</select>
+								筆資料
+							</div>
+							<div class="table-responsive">
+								<table class="table table-striped text-center">
+									<thead>
+										<tr class="text-left">
+											<th>詳細</th>
+											<th>專利名稱</th>
+											<th>專利所有人</th>
+											<th>申請日</th>
+											<th>專利簡介</th>
+											<th>專利說明</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="text-left">
+											<td><a href="#" class="text-ff5f00">詳細</a></td>
+											<td>專利名稱</td>
+											<td>專利所有人</td>
+											<td>申請日</td>
+											<td><a id="modal-intro" href="javascript:;" class="text-ff5f00"><i class="fa fa-paperclip"></i></a></td>
+											<td><a id="modal-instruction" href="javascript:;" class="text-ff5f00"><i class="fa fa-paperclip"></i></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="text-center">
+								<ul class="pagination">
+									<li><a href="#">第一頁</a></li>
+									<li><a href="#">«</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">»</a></li>
+									<li><a href="#">最終頁</a></li>
+								</ul>
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	
+	<!-- #footer -->
+	<div id="footer" class="content-block">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<ul class="list-inline">
+						<li><a href="#modal-edm" data-toggle="modal" title="訂閱電子報">訂閱電子報</a></li>
+						<li><a href="faq.html" title="FAQ問題">FAQ問題</a></li>
+						<li><a href="#" title="臺大國際產學聯盟fb"><i class="fa fa-facebook-square"></i> 臺大國際產學聯盟</a></li>
+						<li><a href="privacy.html" title="隱私權聲明">隱私權聲明</a></li>
+						<li><a href="#modal-lang" data-toggle="modal" title="語系切換">語系切換</a></li>
+					</ul>
+					<ul class="list-inline">
+						<li>100台北市中正區思源街18號</li>
+						<li>Tel：+886-2-3366-8285</li>
+						<li>Fax：+886-2-3366-0000</li>
+					</ul>
+					<p class="copyright hidden-xs">Copyright &copy; 2018 Industry Liaison Office National Taiwan University. All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--mask-->
+	<div class="mask">
+		<div class="infoPosition">
+			<i class="fa fa-5x fa-user-md"></i>
+			<h1>僅支援桌機瀏覽模式</h1>
+		</div>
+	</div>
+	<!-- #TOP -->
+	<div id="gotop">
+		<img src="Content/images/angle-up.svg" alt="置頂">
+	</div>
+	<!-- search -->
+	<div class="modal fade" id="modal-search">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><img src="Content/images/chevron-circle-right.svg" alt="">搜尋</h4>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<input type="text" class="form-control input-lg" placeholder="查詢關鍵字">
+						<span class="input-group-btn">
+							<a href="searchresults.html" type="button" class="btn btn-lg btn-ff5f00" title="搜尋">搜尋</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 關於BTD -->
+	<div class="modal fade" id="modal-BTD">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><img src="Content/images/chevron-circle-right.svg" alt="">關於BTD</h4>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque, earum saepe id nostrum? Velit vero veritatis dolor autem quam blanditiis recusandae omnis, architecto soluta, ad provident officiis adipisci tenetur eum alias corporis quidem fugit quos, delectus quis minus facilis. Incidunt dolorem magnam numquam nihil fugiat, expedita totam. Enim ducimus rerum laborum, ut. Nulla, a, dolores. Rem placeat omnis sapiente assumenda eum quam amet nisi aliquid aspernatur, incidunt itaque doloremque animi sit aut illo sequi tenetur possimus soluta perferendis temporibus quas. Nostrum magnam ab ipsum ullam saepe, repellat numquam repellendus maiores beatae laudantium. Esse et numquam, dolor doloremque suscipit debitis.</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-o" data-dismiss="modal" tilte="關閉">關閉</a>                  
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 管理辦法 -->
+	<div class="modal fade" id="modal-manage">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><img src="Content/images/chevron-circle-right.svg" alt="">管理辦法</h4>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque, earum saepe id nostrum? Velit vero veritatis dolor autem quam blanditiis recusandae omnis, architecto soluta, ad provident officiis adipisci tenetur eum alias corporis quidem fugit quos, delectus quis minus facilis. Incidunt dolorem magnam numquam nihil fugiat, expedita totam. Enim ducimus rerum laborum, ut. Nulla, a, dolores. Rem placeat omnis sapiente assumenda eum quam amet nisi aliquid aspernatur, incidunt itaque doloremque animi sit aut illo sequi tenetur possimus soluta perferendis temporibus quas. Nostrum magnam ab ipsum ullam saepe, repellat numquam repellendus maiores beatae laudantium. Esse et numquam, dolor doloremque suscipit debitis.</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-o" data-dismiss="modal" tilte="關閉">關閉</a>                  
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 聯絡我們 -->
+	<div class="modal fade" id="modal-contact">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><img src="Content/images/chevron-circle-right.svg" alt="">聯絡我們</h4>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque, earum saepe id nostrum? Velit vero veritatis dolor autem quam blanditiis recusandae omnis, architecto soluta, ad provident officiis adipisci tenetur eum alias corporis quidem fugit quos, delectus quis minus facilis. Incidunt dolorem magnam numquam nihil fugiat, expedita totam. Enim ducimus rerum laborum, ut. Nulla, a, dolores. Rem placeat omnis sapiente assumenda eum quam amet nisi aliquid aspernatur, incidunt itaque doloremque animi sit aut illo sequi tenetur possimus soluta perferendis temporibus quas. Nostrum magnam ab ipsum ullam saepe, repellat numquam repellendus maiores beatae laudantium. Esse et numquam, dolor doloremque suscipit debitis.</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-o" data-dismiss="modal" tilte="關閉">關閉</a>                  
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 訂閱電子報 -->
+	<div class="modal fade" id="modal-edm">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><img src="Content/images/chevron-circle-right.svg" alt="">訂閱/取消電子報</h4>
+				</div>
+				<div class="modal-body">
+					<input type="text" class="form-control input-lg" id="" placeholder="請輸入您的email"> 
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-ff5f00" title="訂閱">訂閱</a>
+					<a href="#" type="button" class="btn btn-o" data-dismiss="modal" tilte="取消">取消</a>                  
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 語言切換 -->
+	<div class="modal fade" id="modal-lang">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><img src="Content/images/chevron-circle-right.svg" alt="">語系切換</h4>
+				</div>
+				<div class="modal-body">
+					<select name="Languages" class="form-control input-lg">
+						<option value="English" selected="">English</option>
+						<option value="繁體中文">中文(繁體)</option>
+					</select>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn btn-ff5f00" title="確認">確認</a>
+					<a href="#" class="btn btn-o" data-dismiss="modal" title="取消">取消</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="Content/js/jquery-2.1.3.min.js"></script>
+	<script src="Content/js/bootstrap.min.js"></script>
+	<!-- GOTOP-->
+	<script src="Content/js/jquery.bootstrap-dropdown-on-hover.min.js"></script>
+	<!-- iframe POP-->
+	<script src="Content/js/popwin.js"></script> 
+	<script>
+		$(document).ready(function() {
+			$("#modal-intro").on('click' , function(){
+				popWin.showWin("805","600","專利簡介","modal-intro.html");
+			});
+			$("#modal-instruction").on('click' , function(){
+				popWin.showWin("805","600","專利說明","https://well0324.github.io/NTU%20ILO/");
+			});
+		});
+	</script>
+</body>
+</html>

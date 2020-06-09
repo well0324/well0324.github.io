@@ -1,0 +1,478 @@
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome-webfont.eot');
+	src:url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/fontawesome-webfont.svg#fontawesome') format('svg'),
+	url('../fonts/fontawesome-webfont.woff') format('woff'),
+	url('../fonts/fontawesome-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+body, html { width:100%; height: 100%; padding: 0; margin: 0;}
+body{
+	font-size:15px;
+	line-height:1.5;
+	font-family:"Roboto", "PingFang TC", Arial, "Microsoft JhengHei", sans-serif;
+}
+.bg-index{
+	display:block;
+	position:absolute;
+	top:0;
+	width: 100%; height: 100%; padding: 0; margin: 0;
+	background-image:url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+.bg-header{
+	background-image:url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	box-shadow: 1px 0px 3px 3px rgba(0,0,0,.2);
+}
+a, a:link, a:active, a:hover, a:focus{
+	color:#fff;
+	text-decoration: none ;
+}
+/*header*/
+header {
+	display: block;
+	position: fixed;
+    top: 0;
+    width: 100%;
+	min-height: 50px;
+    margin: 0 auto;
+    padding: 6px;
+    z-index: 2;
+}
+header:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+header .logo {
+	position: absolute;
+	left:50%;
+	margin-left: -30px;
+	margin-top: 12px;
+	color: #326809;
+	font-size: 1.4em;
+	line-height: 42px;
+	font-weight: bolder;
+	text-align:center;
+	text-indent:-9999px;
+	width: 60px;
+	height: 18px;
+	background-image:url(../images/logo.svg);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+header nav {}
+header nav a {
+	display: block;
+	position: relative;
+	top:0px;
+	color: transparent;
+	width: 38px;
+	height: 38px;
+	margin: 0;
+	font-size: 1.2em;
+	text-indent: -8000px;
+}
+
+header nav a:after {
+	content: attr(data-info);
+	color: #47a3da;
+	position: absolute;
+	width: 600%;
+	top: 120%;
+	text-align: right;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+header nav a:hover {}
+header nav a:hover:before {
+	color: #fff;
+}
+header nav a:hover:after {
+	opacity: 1;
+}
+
+.container{
+	margin-top: 50px;
+}
+.icon-mail:before, .icon-menu:before{
+	font-family: 'fontawesome';
+	position: absolute;
+	top: -2px;
+	padding-left: 9px;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-size: 1.2em;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #326809;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+}
+.icon-mail:before {
+	content: "\f003";
+	font-weight:bolder;
+}
+.icon-menu:before {
+	content: "\f0c9";
+}
+.icon-back:before{
+	font-family: 'fontawesome';
+	position: absolute;
+	top: -4px;
+	padding-left: 9px;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-size: 1.3em;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #326809;
+	-webkit-font-smoothing: antialiased;
+	text-indent: -70px;
+}
+.icon-back:before {
+	content: "\f104";
+	font-weight:bolder;
+}
+header nav a.icon-back{
+	color:#326809;
+	font-weight:bolder;
+	padding-top: 7px;
+	text-indent: 25px;
+}
+header nav a.icon-back:hover{
+	color:#fff;
+}
+.icon-close{
+	position: absolute;
+	text-align:center;
+	top:10px;
+	right: 10px;
+}
+.icon-close:before {
+	font-family: 'fontawesome';
+	content: "\f00d";
+	font-size: 1.3em;
+	color: #cbcbcb;
+	display: block;
+	width: 40px;
+	height: 40px;	
+	padding-top: 7px;
+	cursor: pointer; 
+}
+.left{
+	float: left;
+}
+.right{
+	float:right;
+}
+.mask{
+	position:fixed;
+	top:0;
+	display:block;
+	width: 100%;
+	height: 100%;
+	background-image:url(../images/bg.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    z-index: 9999;
+    text-align:center;
+}
+.mask p{
+	color: #fff;
+    font-size: 1.5em;
+    text-shadow:1px 1px 3px 3px rgba(255, 255, 255, 0.3);
+    position: absolute;
+    width: 340px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -170px;
+}
+/*首頁*/
+.GashPointBox{
+	display:block;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top:15%;
+	left: 50%;
+	margin-left: -100px;
+	text-align:center;
+}
+.GashPoint{
+	display:block;
+	width: 200px;
+	height: 200px;
+	background-image:url(../images/bg_gash_point.png);
+	background-size:cover;
+	background-repeat:no-repeat;
+	padding-top: 50px;
+	text-align:center;
+}
+.SavePointTxt{
+	color: #959595;
+}
+.PointNum{
+	font-weight: bolder;
+	margin:10px 0 0 0;
+	padding: 0 30px;
+	background-color: transparent;
+	overflow:hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+.hello{
+    font-size: 1.8em;
+    color: #fff;
+    margin-top: 10px;
+}
+.SlideArea{
+	position: absolute;
+	bottom: 50px;
+	left: 15px;
+	right: 15px;
+	text-align:center;
+}
+.slideCenter{
+	position:absolute;
+	bottom: -5px;
+	left: 50%;
+	margin-left: -6px;
+	display:block;
+	width: 12px;
+	height: 20px;
+	background-color: #c2f567;
+	border-radius:4px;
+	box-shadow:0px 2px 3px 2px rgba(28, 59, 8, 0.4);
+}
+.slideCenter:before{
+	content: "";
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: -4px;
+	left: 0px;
+	border-width: 0 6px 6px;
+	border-style: solid;
+	border-color: transparent transparent #c2f567;
+}
+.slideBar{
+	display: block;
+	width: 100%;
+	height: 8px;
+	background-color:#2c6a06;
+	border-radius:6px;
+	border:1px solid rgba(197, 245, 104, 0.8);
+	box-shadow:1px 1px 1px 1px rgba(28, 59, 8, 0.8) inset;
+}
+.swiper-container{
+	padding-bottom: 20px;
+}
+.swiper-slide{
+	color:#fff;
+	font-size:1em;
+	opacity:.6;
+	margin-top: 4px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3 ease;
+	transition: all .3s ease;
+}
+.card{
+	padding: 30px 60px;
+}
+.card .swiper-slide img{
+	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+}
+.swiper-slide-active{
+	font-size:1em;
+	opacity:1;
+	font-weight:bolder;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.SlideArea .swiper-slide-active a{
+	padding: 2px 10px;
+	border-radius: 50px;
+	border: 1px solid #fff;
+	box-shadow: 0 1px #fff;
+}
+.SlideArea .swiper-slide-active a:active{
+	border: 1px solid #fff;
+	box-shadow: 0 0px #fff inset;
+}
+
+.SlideArea .swiper-slide-prev:before, .SlideArea .swiper-slide-next:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.UserHeader{
+	text-align:center;
+	margin: 50px 0 10px 0;
+}
+.UserHeader img{
+	width: 100px;
+	height: 100px;
+	border-radius:50%;
+	background-color:#fff;
+}
+.GashLogo{
+	display:block;
+	position:absolute;
+	top: 36px;
+	left: 25px;
+	width: 32px;
+	height: 32px;
+	background-image:url(../images/gash_logo.svg);
+	background-size:cover;
+	border:3px solid #539912;
+	border-radius:50%;
+}
+.AddButton{
+	display:block;
+	position:absolute;
+	bottom: 12px;
+	right: 20px;
+	width: 46px;
+	height: 46px;
+	background-color:#2b6806;
+	border:3px solid #55ce0c;
+	border-radius:50%;
+	box-shadow:2px 1px 5px 0px rgba(28, 59, 8, 0.8) inset;
+}
+.AddButton:before {
+	font-family: 'fontawesome';
+	content: "\f067";
+	font-size: 1.2em;
+	color: #c0f565;
+	display: block;
+	width: 40px;
+	height: 40px;	
+	padding-top: 8px;
+}
+a.AddButton:hover:before{
+	color:#fff;
+}
+
+canvas{
+	position:absolute;
+	top: 0;
+	left: 0;
+	-webkit-filter: opacity(.4);
+	-moz-filter: opacity(.4);
+	-o-filter: opacity(.4);
+	-ms-filter: opacity(.4);
+	filter: opacity(.4);
+}
+/*nav*/
+.item{
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+	background-size:cover;
+}
+.item01{
+	background-image:url(../images/bt_item_01.png);
+}
+.item02{
+	background-image:url(../images/bt_item_02.png);
+}
+.item03{
+	background-image:url(../images/bt_item_03.png);
+}
+.item04{
+	background-image:url(../images/bt_item_04.png);
+}
+/*獨享序號*/
+.bg-00c488{
+	background-color: #00c488;
+}
+.slogan{
+	color: #fff;
+	padding: 10px 15px 0px 15px;
+	background-image:url(../images/bg_slogan.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:left top;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 320px) {
+	.GashPointBox{
+		width: 160px;
+		height: 160px;
+		margin-left: -80px;
+	}
+	.GashPoint{
+		width: 160px;
+		height: 160px;
+		padding-top: 40px;
+	}
+	.PointNum{
+		margin: 5px 0 0 0;
+	}
+	.GashLogo{
+		top: 32px;
+		left: 20px;
+		width: 26px;
+		height: 26px;
+		border-radius:50%;
+	}
+	.AddButton{
+		bottom: 6px;
+		right: 15px;
+		width: 40px;
+		height: 40px;
+	}
+	.AddButton:before {
+		width: 34px;
+		height: 34px;	
+		padding-top: 5px;
+	}
+	.mask{
+		display:none; z-index: 1;
+	}
+}
+@media screen and (min-width: 321px) and (max-width: 767px) {
+	.mask{
+		display:none; z-index: 1;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.mask{
+		display:none; z-index: 1;
+	}
+}

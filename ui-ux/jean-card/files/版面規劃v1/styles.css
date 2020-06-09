@@ -1,0 +1,174 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:824px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u881 {
+  position:absolute;
+  left:25px;
+  top:30px;
+  width:795px;
+  height:539px;
+}
+#u881_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:795px;
+  height:539px;
+}
+#u882_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:165px;
+  height:34px;
+}
+#u882 {
+  position:absolute;
+  left:333px;
+  top:31px;
+  width:165px;
+  height:34px;
+}
+#u883 {
+  position:absolute;
+  left:2px;
+  top:9px;
+  width:161px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u884_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:551px;
+  height:25px;
+}
+#u884 {
+  position:absolute;
+  left:25px;
+  top:619px;
+  width:551px;
+  height:25px;
+}
+#u885 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:551px;
+  word-wrap:break-word;
+}
+#u886 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:0px;
+  height:0px;
+}
+#u887_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:31px;
+  height:3px;
+}
+#u887 {
+  position:absolute;
+  left:760px;
+  top:38px;
+  width:31px;
+  height:3px;
+}
+#u888 {
+  position:absolute;
+  left:2px;
+  top:-6px;
+  width:27px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u889_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:31px;
+  height:3px;
+}
+#u889 {
+  position:absolute;
+  left:760px;
+  top:47px;
+  width:31px;
+  height:3px;
+}
+#u890 {
+  position:absolute;
+  left:2px;
+  top:-6px;
+  width:27px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u891_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:31px;
+  height:3px;
+}
+#u891 {
+  position:absolute;
+  left:760px;
+  top:55px;
+  width:31px;
+  height:3px;
+}
+#u892 {
+  position:absolute;
+  left:2px;
+  top:-6px;
+  width:27px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u893_div {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:73px;
+  height:22px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-size:18px;
+}
+#u893 {
+  position:absolute;
+  left:25px;
+  top:590px;
+  width:73px;
+  height:22px;
+  font-size:18px;
+}
+#u894 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:73px;
+  white-space:nowrap;
+}

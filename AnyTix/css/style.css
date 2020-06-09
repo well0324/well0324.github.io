@@ -1,0 +1,176 @@
+*{
+	margin:0;
+	padding:0;
+	
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+/* ---reset.css--- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---reset.css--- */
+/*---basic---*/
+body{
+	color: #333;
+	font-size:12px;
+	font-family:"Roboto", "PingFang TC", Arial, "Microsoft JhengHei", sans-serif;		
+	line-height: 1.5;
+}
+section{
+  margin-bottom: 70px;
+}
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.2em; }
+h5, h6 { font-size: 1.1em; }
+
+/* ---search---*/
+#search{
+	margin-bottom: 20px;
+	padding: 20px 0 5px 0;
+	background-color:#f9e026;
+}
+
+#search .form-group .input-group-addon:first-child{
+  border-radius:50px;
+  margin-right: 5px;
+}
+
+#search .form-group .input-group .form-control:not(:first-child):not(:last-child){
+  font-size: 15px;
+  border-top-left-radius:50px;
+  border-bottom-left-radius:50px;
+  margin-left: 5px;
+}
+
+#search .form-group .input-group-addon:last-child{
+  border-top-right-radius:50px;
+  border-bottom-right-radius:50px;
+  width: 60px;
+}
+
+/* ---swiper 輪播js---*/
+.swiper-wrapper{
+	animation-duration: 1.5s;
+}
+
+#commend .swiper-slide {
+	width:80%;
+}
+
+.swiper-slide img{
+  border-radius:6px;
+}
+
+.swiper-slide-active{
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+}
+
+.panel{
+  margin-bottom: 10px;
+  background-color:transparent;
+  border: 0px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0);
+  box-shadow: 0 1px 1px rgba(0,0,0,0);
+}
+.panel .more{
+  float:right;
+  line-height: 2;
+}
+
+/* --- pad --- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* --- pc --- */
+
+@media screen and (min-width: 1025px) {
+}
+
+.overlay {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 15px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: rgba(249, 224, 38, 0.9);
+}
+
+.overlay h3 {
+  font-size:14px;
+  font-weight:700;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.overlay p{
+  font-size:12px;
+}
+
+.overlay button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  border-radius: 0px;
+  background-color: transparent;
+}

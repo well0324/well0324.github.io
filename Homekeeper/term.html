@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>HomeKeeper 訂悅家</title>
+	<!-- 共用css -->
+	<link rel="stylesheet" href="content/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="content/font-awesome/css/font-awesome.min.css">
+	<!-- 自訂css -->
+	<link rel="stylesheet" href="content/assets/css/style.css">
+	<link rel="stylesheet" href="content/assets/css/cartstep.css">
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body id="top">
+	<section>
+		<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">選單切換</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><img src="content/images/logo.svg" alt="" class="img-responsive"></a>
+					</div>
+					<div class="my-navbar rightIn">
+						<!-- 左選單 -->
+						<ul class="nav-list nav navbar-nav navbar-right">
+							<li class="dropdown ">
+								<a href="#"  class="dropdown-toggle" data-toggle="dropdown">Get <small>訂悅</small><b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="menu-list">紳士</li>
+									<li><a href="get.html">內褲</a></li>
+									<li><a href="#">襪子</a></li>
+									<li class="menu-list">淑女</li>
+									<li><a href="#">手帕</a></li>
+									<li class="menu-list">家庭</li>
+									<li><a href="#">毛巾</a></li>
+									<li><a href="#">飲品</a></li>
+									<li class="menu-all"><a href="all.html">訂悅總覽</a></li>
+								</ul>
+							</li>
+							<li><a class="" href="how.html">How <small>說明</small></a></li>
+							<li><a class="" href="blog.html">Blog <small>悅讀</small></a></li>
+							<li class="dropdown">
+								<a href=""  class=" dropdown-toggle" data-toggle="dropdown">Brand <small>品牌</small><b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="menu-list">紳士</li>
+									<li><a href="brand.html">內褲</a></li>
+									<li><a href="#">襪子</a></li>
+									<li class="menu-list">淑女</li>
+									<li><a href="#">手帕</a></li>
+									<li class="menu-list">家庭</li>
+									<li><a href="#">毛巾</a></li>
+									<li><a href="#">飲品</a></li>
+								</ul>
+							</li>
+							<li><a class="" href="contact.html">Contact Us <small>聯絡</small></a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Member <small>會員</small><b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="login.html">登入/註冊</a></li>
+									<li><a href="member.html">會員資料</a></li>
+									<li><a href="info.html">訂悅資料</a></li>
+								</ul>
+							</li>
+							<li class="icon-login visible-lg">                            
+								<a href="login.html">會員登入</a>
+							</li>
+							<li class="icon-shop visible-lg">
+								<a href='#modal-shop' data-toggle="modal" class="" data-shop="" onclick="ReloadShop()"><sapn class="shop-nummber">10</sapn>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- mobile-share -->
+		<nav id="mobile-share" class="hidden-lg">
+			<div class="col-xs-3 col-sm-3">
+				<a href="index.html">
+					<div class="icon-home">首頁</div>
+					<p>首頁</p>
+				</a>
+			</div>
+			<div class="col-xs-3 col-sm-3">
+				<a href="Login.html">
+					<div class="icon-login">登入</div>
+					<p>登入</p>
+				</a>
+			</div>
+			<div class="col-xs-3 col-sm-3">
+				<a href='#modal-shop' data-toggle="modal" data-shop="" onclick="ReloadShop()">
+					<div class="icon-shop">訂悅車</div>
+					<p>訂悅車<sapn class="shop-nummber">10</sapn></p>
+				</a>
+			</div>
+			<div class="col-xs-3 col-sm-3">
+				<a data-scroll data-options='{ "easing": "linear" }' href="#top">
+					<i class="fa fa-angle-up" aria-hidden="true"></i>
+					<p>TOP</p>
+				</a>
+			</div>
+		</nav>
+	</section>
+
+	<!-- content -->
+	<section id="member-list">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12">
+					<ol class="breadcrumb">
+						<li>
+							<a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+						</li>
+						<li class="active">訂悅家網站使用條款</li>
+					</ol>
+				</div>
+			</div>
+			<!--聯絡我們-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">訂悅家網站使用條款</h3>
+				</div>
+				<div class="panel-body">
+					<div class="col-xs-12 col-sm-12">
+						<h4>訂悅家（網址為WWW.HOMEKEEPER.COM.TW，以下稱「本網站」）為沂動行銷股份有限公司（以下稱「本公司」）所經營之電子商務網站，並制定訂悅家網站使用條款（以下稱「本條款」）及其他相關規範或公告以提供您相關服務。</h4>
+						<h4>一、同意條款</h4>
+						<ul style="list-style:decimal; padding-left:30px;line-height:1.8;">
+							<li>請您於首次使用本網站服務前，詳細閱讀並同意本條款，再行填寫您的基本資料以完成會員註冊及購物流程。開始購物流程，即表示您已經閱讀、了解且同意接受本條款之全部內容與約定；若您不同意全部或部分者，請勿填寫基本資料及完成後續購物流程。</li>
+							<li>您同意本公司有權因應營運之需求，隨時調整本條款，除對您已完成之購物權益有重大影響外，本公司將不會個別通知。本條款之最新內容，將公佈於本網站首頁連結，您每次進行購物前，均可詳細閱讀，以維護您的權益。</li>
+							<li>若您於本條款進行任何修改或變更之後，仍繼續使用本網站服務，將視為您已經閱讀、瞭解且同意接受相關修改及變更。若您不同意全部或部分者，則請勿使用本網站服務。</li>
+							<li>若您尚未滿二十歲，除應符合上述規定外，並應於您的家長（或監護人）閱讀、瞭解並同意本條款之所有內容及其後修改變更後，方得使用或繼續使用本網站服務。當您使用或繼續使用本網站服務時，即推定您的家長（或監護人）已閱讀、瞭解並同意接受本條款之所有內容及其後修改變更。</li>
+						</ul>
+						<h4>二、會員帳號、密碼及安全</h4>
+						<ul style="list-style:decimal; padding-left:30px;line-height:1.8;">
+							<li>本網站為保障交易安全，將以您所填寫之基本資料中的電子郵件信箱作為帳號，並由您自行設定一組密碼作為個人登入辨識使用，您可依需要自行變更個人密碼。請勿使用與其他網站相同之密碼，並經常變更您的個人密碼，以維護您帳號的安全。
+							<li>您同意將您的帳號及密碼善盡妥善保管及保密之責任，包含但不限於：不洩漏帳戶、密碼予第三人；不與他人共用帳號、密碼；適時登出本網站等。</li>
+							<li>除經證明係第三人違法使用之情形，您須為利用您所設定之正確帳號、密碼登入之使用行為負全部責任，不得任意否認交易。</li>
+							<li>您聲明並保證您所填寫之基本資料為您正確且完整的資料，不得使用他人資料、如有違反前開保證，本公司有權暫停或終止您的帳號，並拒絕您使用本網站的服務。</li>
+							<li>您的帳號若有被冒用、盜用之情形，應立即通知本公司，以避免損害擴大。本公司將協助暫停該帳號相關交易及後續使用，並於釐清帳號使用問題後，依您的請求重新設定密碼開通使用。</li>
+						</ul>
+						<h4>三、個人資料保護</h4>
+						<ul style="list-style:decimal; padding-left:30px;line-height:1.8;">
+							<li>本公司於您每次交易或參加活動時，為提供本公司相關服務及行銷之目的，蒐集、處理及利用您的個人資料。有關個人資料相關注意事項，請參閱本網站「隱私權政策」。
+							<li>本公司將遵循個人資料保護相關法令的規定，除依本條款、隱私權政策或法律規定外，不會違法利用您的個人資料。在下列的情況，本公司有可能會提供您的個人資料給相關機構，或主張其權利受侵害並提示司法機關正式文件之第三人：
+								<ol style="padding-left:0;">a. 依法令或檢警調、司法機構或其他有權機關基於法定程序之要求；</ol>
+								<ol style="padding-left:0;">b. 在緊急情況下為維護其他客戶或第三人之合作權益；</ol>
+								<ol style="padding-left:0;">c. 為維護本網站的正常運作；</ol>
+								<ol style="padding-left:0;">d. 為提供本公司相關服務產生的金流、物流、其他協力或合作廠商必要資訊；</ol>
+								<ol style="padding-left:0;">e. 使用者有任何違反政府法令或本網站使用條款之情形。</ol>
+							</li>
+							<li>本網站可能因廣告或其他合作促銷活動而包含其他網站之連結，您點選該連結至其他網站，即不適用本條款及隱私權政策之規範。您須自行判斷各該網站相關條款對您的權益保障是否足夠，再決定是否使用該網站服務。</li>
+						</ul>
+						<h4>四、通知方式</h4>
+						<p>您同意您與本公司間有關本網站使用或購物所生之交易，以電子郵件為表示方式。本公司得以電子郵件向您為意思表示之通知，您亦得透過本網站向本公司為意思表示之通知。</p>
+						<h4>五、交易注意事項</h4>
+						<ul style="list-style:decimal; padding-left:30px;line-height:1.8;">
+							<li>本網站所提供之商品數量有限，請您於挑選後盡速完成訂購程序，放入購物袋不代表您已完成訂購，若有其他使用者在您完成訂購程序前已完成訂購程序，系統會通知您該筆商品已售罄，請您自購物袋移除。</li>
+							<li>您得依據本網站所提供的確認商品數量及價格機制進行下單。本公司對您的下單內容，除於下單後5個工作日內附正當理由為拒絕外，為接受下單。如因廠商缺貨等正當理由致無法出貨，本公司將於5個工作天內告知取消交易/交易不成立。</li>
+							<li>本網站得就特定商品訂定個別消費者每次訂購的數量上限。逾越該數量上限進行下單或同一消費者以複數帳號重複、多次下單時，本網站僅負對單一消費者依該數量上限出貨之責任。</li>
+							<li>本網站商品之運送依您訂購時選擇及指定之方式為之，商品之訂價不含運費。惟若您符合一定活動優惠條件時，將依您選擇之商品運送方式，由本公司負擔運費。若您因部分商品退貨致不符合運費優惠條件時，本公司將自您解約退款之金額中收取該筆訂單之原始運送費用（運送費用依下單時網站公告為準）。</li>
+							<li>您依消費者保護法第19條規定於貨到後7日之猶豫期間內，行使解除契約的權利。請注意猶豫期並非試用期，僅供您評估是否購買該商品之用，若您實際使用或試用該商品，可能會影響您解約退款的權利。</li>
+							<li>有關本網站購物相關未盡事宜，請參閱本網站<a href="faq.html">「訂悅FAQ」</a>。</li>
+						</ul>
+						<h4>六、智慧財產權</h4>
+						<p>本網站所有內容，包括但不限於：商品攝影、模特兒照片、美術插畫、網站架構、程式設計、網站畫面的安排、網頁設計版式、商標、其他標示或資訊等，均屬本公司或相關權利人依法擁有智慧財產權之客體，受著作權法、商標法、專利法、營業秘密法及公平交易法之保護，非經本公司或權利人事先許可或授權，任何人不得逕自使用、修改、重製、公開播送、改作、散佈、發行、公開發表、進行還原工程、解編、反向組譯或侵害本公司或他人之營業秘密、商標權、著作權、專利權等智慧財產權權益，以免涉侵權或違法之責任。</p>
+						<h4>七、責任限制</h4>
+						<p>您同意因使用本網站或於本網站購物所生之糾紛，除法律另有強制規定者外，以您當次使用或購物所實際支付予本公司之費用，為賠償責任之上限。您因違反本條款或其他違約事件所生對本公司之賠償責任，亦同。</p>
+						<h4>八、服務宗旨及免責聲明</h4>
+						<ul style="list-style:decimal; padding-left:30px;line-height:1.8;">
+							<li>本公司將以符合目前一般可合理期待安全性之方式及技術，維護本網站的正常運作。下列情形本公司有權暫停提供本網站服務的全部或部分，且不負事先通知您的義務，本公司對因而產生任何直接或間接的損害，均不負任何賠償或補償的義務：
+								<ol style="padding-left:0;">a. 對本網站相關軟硬體設備進行搬遷、更換、升級、保養或維修；</ol>
+								<ol style="padding-left:0;">b. 天災或其他不可抗力因素所導致的服務停止或中斷；</ol>
+								<ol style="padding-left:0;">c. 因電信或網站公司服務中斷或其他不可歸責於本公司事由所致的服務停止或   中斷；</ol>
+								<ol style="padding-left:0;">d. 本網站遭外力影響致資訊選是不正確、或遭偽造、竄改、刪除或擷取，獲致系統中  斷或不能正常運作；</ol>
+								<ol style="padding-left:0;">e. 使用者有違反本條款或法令之情形而對該使用者暫停或終止服務；</ol>
+								<ol style="padding-left:0;">f. 其他本公司認為有需要暫停或終止服務之情形。</ol>
+							</li>
+							<li>本公司針對可預知的軟硬體維護計畫，有可能導致網站暫停或終止服務時，將盡可能地於該狀況發生前，以適當方式於本網站公告。</li>
+						</ul>
+						<h4>九、違約處理</h4>
+						<ul style="list-style:decimal; padding-left:30px;line-height:1.8;">
+						<li>為維護本網站全體使用者之權益，若您有下列情形之一者，本公司得暫停或終止您的購物資格或拒絕您使用本網站全部或部分服務：</li>
+							<ol style="padding-left:0;">a. 提供錯誤或不實資料進行登錄；</ol>
+							<ol style="padding-left:0;">b. 冒用他人帳號、個資、信用卡、金融帳號等進行交易；</ol>
+							<ol style="padding-left:0;">c. 經本公司認定有惡意解約退貨之情事；</ol>
+							<ol style="padding-left:0;">d. 對本公司客服部門為騷擾或不當言行；</ol>
+							<ol style="padding-left:0;">e. 其他違反本網站使用條款或違法之情事。</ol>
+						</li>
+						<li>您同意本公司依本網站使用條款暫停或終止您的購物資格，或拒絕您使用本網站全部 或部分服務時，均無須得到您的同意，且本公司對您或任何第三人均不負任何義務或責任。</li>
+						</ul>
+						<h4>十、準據法與管轄法院</h4>
+						<ul style="list-style:decimal; padding-left:30px;line-height:1.8;">
+							<li>本條款任何條款的全部或一部份無效時，並不影響其他約定的效力。您與本公司的權利義務關係，應依本條款及相關適用的本網站公告或規範定之。若有發生任何爭議，您可以向本網站所記載的客服聯絡方式提出申訴或反應，雙方均應秉持最大誠意，依誠實信用、平等互惠原則協商解決之。</li>
+							<li>本條款之解釋與適用，以及與本條款有關的爭議，均應依照中華民國法律予以處理，並以台灣台北地方法院為第一審管轄法院。</li>
+						</ul>
+						<p>最近一次更新日期：2017年4月15日</p>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<div class="">
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<ul class="footer-link list-inline">
+						<li><a href="faq.html" class="hover-style">常見問與答</a></li>
+						<li><a href="term.html">網站使用條款</a></li>
+						<li><a href="privacy.html">隱私權政策</a></li>
+						<li><a href="https://www.facebook.com/homekeeper.com.tw/" target="_blank"><i class="fa fa-icon fa-facebook-square"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 text-right visible-lg">
+					<ul class="info">
+						<li>客服專線：02-2731-9996 / 客服信箱：<a href="mailto:service@homekeeper.com.tw">service@homekeeper.com.tw</a></li>
+						<li>服務時間：週一至週五 09:00~12:30 / 13:30~18:00 / 國定假日休息</li>
+						<li>Copyright © 2017 www.homekeeper.com.tw All rights reserved.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--gotop-->
+	<a data-scroll data-options='{ "easing": "linear" }' href="#top" class="gotop">
+		<i class="fa fa-angle-up" aria-hidden="true"></i>
+		<p>TOP</p>
+	</a>
+
+	<!-- 購物車彈跳視窗 -->
+	<div class="modal fade" id="modal-shop">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><sapn class="icon-shop icon-shop-position"></sapn>訂悅車</h4>
+				</div>
+				<div class="modal-body">
+					<div class="cart-table">
+						<div class="tr" style="">
+							<div class="td">
+								<span style="color: #4d9891">您尚未訂悅商品</span>
+							</div>
+						</div><!-- end.tr -->
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<a href="#" type="button" class="btn btn-outline" data-dismiss="modal">繼續訂悅</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 共用js -->
+	<script src="content/assets/js/jquery1.11.1.js"></script>
+	<script src="content/assets/js/bootstrap.min.js"></script>
+	<script src="content/assets/js/smooth-scroll.js"></script> 
+	<script>smoothScroll.init();</script> 
+	<!-- 選單mobile -->
+	<script>
+		$(function(){
+			$('.navbar-toggle').on('click', switchNav)
+			function switchNav(){
+				$('.my-navbar').toggleClass('open');
+			}
+		})
+	</script>
+	<!-- modal js -->
+	<script src="content/assets/js/setModalMaxHeight.js"></script>
+</body>
+</html>

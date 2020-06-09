@@ -1,0 +1,213 @@
+/*ª`¥Ø°Ó«~*/
+#main-wrapper {
+    position: relative;
+    background: #edf6f3;
+	padding:40px 0;
+}
+.major {
+    position: relative;
+    text-align: center;
+    border-top: solid 1px #c1d2db;
+    top: 1em;
+	margin-bottom:20px;
+}
+.major h2 {
+    background:#edf6f3;
+    position: relative;
+    top: -0.65em;
+    display: inline;
+    margin: 0;
+    padding: 0 1em 0 1em;
+}
+
+.PdCarousel article {
+    border-radius: 4px;
+}
+@media (min-width: 768px) and (max-width: 979px){
+	#main-wrapper { padding:30px 0;}
+}
+@media(max-width: 767px){
+    #main-wrapper { padding:30px 0;}
+	.major h2 { font-size:1em}
+}
+
+/* Carousel */
+
+	.PdCarousel {
+		position: relative;
+		overflow: hidden;
+		padding: 2em 0 2em 0;
+		margin-bottom: 0;
+	}
+
+		.PdCarousel .forward, .PdCarousel .backward {
+			position: absolute;
+			top: 50%;
+			width: 6em;
+			height: 12em;
+			margin-top: -6em;
+			cursor: pointer;
+		}
+
+			.PdCarousel .forward:before, .PdCarousel .backward:before {
+				content: '';
+				display: block;
+				width: 6em;
+				height: 6em;
+				border-radius: 100%;
+				background-color: rgba(0, 0, 0, 0.2);
+				position: absolute;
+				top: 50%;
+				margin-top: -3em;
+				-moz-transition: background-color 0.35s ease-in-out;
+				-webkit-transition: background-color 0.35s ease-in-out;
+				-o-transition: background-color 0.35s ease-in-out;
+				-ms-transition: background-color 0.35s ease-in-out;
+				transition: background-color 0.35s ease-in-out;
+				-webkit-backface-visibility: hidden;
+			}
+
+			.PdCarousel .forward:after, .PdCarousel .backward:after {
+				content: '';
+				width: 3em;
+				height: 3em;
+				position: absolute;
+				top: 50%;
+				margin: -1.5em 0 0 0;
+				background: url("images/arrow.svg") no-repeat center center;
+			}
+
+			.PdCarousel .forward:hover:before, .PdCarousel .backward:hover:before {
+				background-color: rgba(0, 160, 92, 0.8);
+			}
+
+		.PdCarousel .forward {
+			right: 0;
+		}
+
+			.PdCarousel .forward:before {
+				right: -3em;
+			}
+
+			.PdCarousel .forward:after {
+				right: -0.25em;
+			}
+
+		.PdCarousel .backward {
+			left: 0;
+		}
+
+			.PdCarousel .backward:before {
+				left: -3em;
+			}
+
+			.PdCarousel .backward:after {
+				left: -0.25em;
+				-moz-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				-ms-transform: scaleX(-1);
+				transform: scaleX(-1);
+			}
+
+		.PdCarousel .reel {
+			white-space: nowrap;
+			position: relative;
+			-webkit-overflow-scrolling: touch;
+			padding: 0 2em 0 2em;
+		}
+
+		.PdCarousel article {
+			display: inline-block;
+			width: 10em;
+			background: #fff;
+			text-align: center;
+			padding: 0.5em;
+			margin: 0 2em 0 0;
+			white-space: normal;
+			opacity: 1.0;
+			-moz-transition: opacity 0.75s ease-in-out;
+			-webkit-transition: opacity 0.75s ease-in-out;
+			-ms-transition: opacity 0.75s ease-in-out;
+			transition: opacity 0.75s ease-in-out;
+		}
+
+			.PdCarousel article.loading {
+				opacity: 0;
+			}
+
+			.PdCarousel article .image {
+				position: relative;
+				left: -1em;
+				top: 0;
+				width: auto;
+				margin-right: -2em;
+				margin-bottom: 3em;
+			}
+
+			.PdCarousel article p {
+				text-align: center;
+			}
+
+/* Wide */
+
+	@media screen and (max-width: 1680px) {
+
+		/* PdCarousel */
+
+			.PdCarousel {
+				padding: 1.5em 0 1.5em 0;
+			}
+
+				.PdCarousel .reel {
+					padding: 0 1.5em 0 1.5em;
+				}
+
+				.PdCarousel article {
+					width: 10em;
+					margin: 0 1.25em 0 0;
+				}
+
+	}
+
+
+	@media screen and (max-width: 840px) {
+
+		/* PdCarousel */
+
+			.PdCarousel {
+				padding: 1.25em 0 1.25em 0;
+			}
+
+				.PdCarousel article {
+					width: 10em;
+					margin: 0 1em 0 0;
+				}
+
+	}
+
+/* Mobile */
+
+
+	@media screen and (max-width: 736px) {
+
+		/* PdCarousel */
+
+			.PdCarousel {
+				padding: 0.5em 0 0.5em 0;
+			}
+
+				.PdCarousel .reel {
+					padding: 0 0.5em 0 0.5em;
+				}
+
+				.PdCarousel article {
+					width: 10em;
+					padding-bottom: 2em;
+					margin: 0 0.5em 0 0;
+				}
+
+					.PdCarousel article .image {
+						margin-bottom: 2em;
+					}
+
+	}

@@ -1,0 +1,236 @@
+body{
+	background: #fff;
+}
+form {
+    font-size: 1em;
+}
+.text-ff5f00, a.text-ff5f00:link{
+	color:#ff5f00;
+	text-decoration: none;
+	padding-bottom: 2px;
+	border-bottom:0px solid #fff;
+}
+a.text-ff5f00:hover{
+	border-bottom:1px solid;
+}
+
+.logo-resources{
+	display:block;
+	width: 169px;
+	height: 114px;
+	background-image:url(../images/logo_btd_mobile.jpg);
+	background-position: center center;
+	background-size:cover;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+
+#BTD {
+	color: white;
+	background-image: url(../images/traffic.jpg);
+}
+#BTD .header{
+	margin-top: -80px;
+}
+#BtdSearch{
+	height:114px;
+	background-color:#161616;
+}
+.nav-btd{
+	list-style:none;
+	padding-left: 0;
+	margin-left: 0;
+	text-align:right;
+}
+
+.nav-btd li a{
+	display:block;
+	color:#d7d7d7;
+	font-size: 15px;
+	margin-bottom: 5px;
+	padding: 5px 10px 5px 30px;
+	background-color:rgba(22, 22, 22, 0.7);
+	border-right:5px solid #de5f0f;
+}
+
+.nav-btd li a:hover, .nav-btd li a.active{
+	color:#fff;
+	background-color:#de5f0f;
+}
+.nav-btd-search{
+	padding-top: 70px;
+}
+.nav-btd-search li a{
+	color:#d7d7d7;
+}
+.nav-btd-search li a:hover{
+	color:#de5f0f;
+}
+.nav-btd-search li + li:before{
+	content:"|";
+	font-size:12px;
+	padding-right: 10px;
+}
+#SearchPreliminary{
+	width: 700px;
+	margin-top: 50px;
+}
+#SearchPreliminary .thumbnail{
+	background:rgba(256, 256, 256, 0.6);
+	padding: 20px;
+}
+#SearchAdvanced{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#SearchAdvanced .thumbnail{
+	padding: 20px;
+}
+#SearchAdvanced .thumbnail #searchNav li a{
+	border:1px solid #ddd;
+}
+#SearchAdvanced .thumbnail #searchNav li a:hover{
+	border:1px solid #de5f0f;
+}
+#SearchAdvanced .nav-tabs{
+	border-bottom:0;
+}
+
+#searchNav {
+	margin-top: -30px;
+}
+#searchNav ul {
+	list-style:none;
+	padding-left: 0;
+}
+#searchNav li {
+	float:left;
+	margin-bottom: 10px;
+	margin-right:10px;
+}
+#searchNav li a {
+	display:block;
+	width:120px;
+	height:80px;
+	color: #999;
+	line-height: 2.5;
+	text-align:center;
+	background-color:#fff;
+	border:0px solid #de5f0f;
+	border-radius:6px;
+}
+#searchNav li a.click, #searchNav li a:hover {
+	color:#fff!important;
+	background-color:#de5f0f;
+}
+
+#searchNav li a .fa{
+	display:block;
+	padding-top: 10px;
+}
+
+.share-group a{
+	display:inline-block;
+	
+}
+.share-group a img{
+	color:#7b7b7b;
+	width:20px;
+	opacity:.5;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+}
+.share-group a img:hover{
+	opacity:.8;
+	-o-transition: all .4s;
+	-ms-transition: all .4s;
+	-moz-transition: all .4s;
+	-webkit-transition: all .4s;
+	transition: all .4s;
+}
+
+input[type="radio"]+label, input[type="checkbox"]+label{
+	padding-left:0;
+}
+
+input[type="radio"]:checked+label, input[type="checkbox"]:checked+label{
+	color:#de5f0f;
+	padding-left:0;
+}
+
+#HtmlArea .content-block:nth-child(odd){
+	background-color: #fff;
+}
+#HtmlArea .content-block:nth-child(even){
+	background-color: #e9f1f3;
+}
+
+#HtmlArea h2{
+	text-align:center;
+	padding:20px 0px;
+	margin-bottom: 30px;
+	border-bottom:1px solid #e3e3e3;
+}
+#HtmlArea a{
+	margin-top: 30px;
+}
+
+.mask{
+	display:none;
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color:#000;
+	z-index:999;
+}
+.infoPosition{
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	left: 50%;
+	top: 50%;
+	margin: -100px 0 0 -150px;
+	color:#ff5f00;
+	text-align:center;	
+}
+.infoPosition .fa{
+	margin-bottom: 10px;
+}
+.infoPosition h1{
+	color:#ff5f00;
+	line-height: 2;
+}
+
+.search-condition{
+	background: #f4f4f4;
+	padding: 30px 0 20px 0;
+	border-radius: 6px;
+}
+
+.table-responsive .table thead th{
+	color:rgba(255, 255, 255, 0.6);
+	font-size: 15px;
+	padding: 5px 15px;
+	background-color:#626262;
+}
+@media screen and (max-width: 767px){
+	.logo-resources{
+		width: 70px;
+		height: 50px;
+	}
+	.mask{
+		display:block;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.mask{
+		display:block;
+	}
+}

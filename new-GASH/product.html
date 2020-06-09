@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>new GASH</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+</head>
+<body>
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu">
+		<span id="showRightClose" class="icon-close"></span>
+		<div class="UserHeader">
+			<img src="images/userheader.png" alt="">
+		</div>
+		<h3>AMY</h3>
+		<a href="javascript:;"><span class="item item01"></span>兌換</a>
+		<a href="javascript:;"><span class="item item02"></span>加點數</a>
+		<a href="javascript:;"><span class="item item03"></span>好友</a>
+		<a href="javascript:;"><span class="item item04"></span>掃描登入</a>
+	</nav>
+	<div class="cbp-spmenu-push">
+		<header class="bg-header">
+			<a href="index.html" class="logo">GASH</a>
+			<nav>
+				<a href="index.html" id="" class="icon-back left">Back</a>
+				<a href="javascript:;" id="showRightPush" class="icon-menu right">open</a>
+			</nav>
+		</header>		
+		<div class="container">
+			<div class="row">
+				<div class="bg-00c488 animated zoomInUp" style="animation-duration: 1s;animation-iteration-count:1">
+					<img src="images/banner.jpg" alt="" class="img-responsive">
+					<div class="slogan">
+						<p>專屬於你！只要在期間內完成指定任務，就可以獲得豐富獎勵！</p>
+					</div>
+				</div>
+				<div class="swiper-container-card card animated bounceInUp" style="animation-duration: 1.3s;animation-iteration-count:1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="javascript:;"><img src="images/card.png" alt="" class="img-responsive"></a></div>
+						<div class="swiper-slide"><a href="javascript:;"><img src="images/card.png" alt="" class="img-responsive"></a></div>
+						<div class="swiper-slide"><a href="javascript:;"><img src="images/card.png" alt="" class="img-responsive"></a></div>
+						<div class="swiper-slide"><a href="javascript:;"><img src="images/card.png" alt="" class="img-responsive"></a></div>
+						<div class="swiper-slide"><a href="javascript:;"><img src="images/card.png" alt="" class="img-responsive"></a></div>
+						<div class="swiper-slide"><a href="javascript:;"><img src="images/card.png" alt="" class="img-responsive"></a></div>
+						<div class="swiper-slide"><a href="javascript:;"><img src="images/card.png" alt="" class="img-responsive"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-index"></div>
+	<div class="mask">
+		<p class="animated zoomInUp" style="animation-duration: 1s;animation-iteration-count:1">
+			<span style="font-size: 2em;">OPPS!</span></br>請使用手機瀏覽畫面
+		</p>
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/countUp.min.js"></script>
+<script src="js/circleMagic.min.js"></script>
+<script>
+	//nav選單
+	var menuRight = document.getElementById( 'cbp-spmenu' ),
+	body = document.body;
+	showRightPush.onclick = function() {
+		classie.toggle( this, 'active' );
+		classie.toggle( body, 'cbp-spmenu-blur' );
+		classie.toggle( menuRight, 'cbp-spmenu-open' );
+		disableOther( 'showRightPush' );
+	};
+	showRightClose.onclick = function() {
+		classie.toggle( this, 'active' );
+		classie.toggle( body, 'cbp-spmenu-blur' );
+		classie.toggle( menuRight, 'cbp-spmenu-open' );
+		disableOther( 'showRightPush' );
+	};
+	function disableOther( button ) {
+		if( button !== 'showRightPush' ) {
+			classie.toggle( showRightPush, 'disabled' );
+		}
+		if( button !== 'showRightClose' ) {
+			classie.toggle( showRightPush, 'disabled' );
+		}
+	};
+	//card
+	var swiper = new Swiper('.swiper-container-card', {
+		effect: 'coverflow',
+		grabCursor: true,
+		centeredSlides: true,
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows : false,
+		},
+	});
+</script>
+</html>
