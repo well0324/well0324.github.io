@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  <title>GASHTAG-發送任務</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- font-awesome CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- sidebar -->
+  <link href="css/sidebar.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- tablesorter -->
+  <link href="css/theme.dropbox.css" rel="stylesheet">   
+  <!-- tablesorter.pager -->
+  <link href="css/jquery.tablesorter.pager.css" type="text/css" rel="stylesheet"/>
+  <!-- daterangepicker -->
+  <link href="css/daterangepicker.css" rel="stylesheet" type="text/css" />
+  <!-- colpick -->
+  <link href="css/colpick.css" rel="stylesheet" type="text/css" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>    
+    h2.page-header{
+      margin:0 0 15px 0px;
+      padding: 0;
+    }
+    .thumbnail{
+      padding: 30px;
+    }
+    #leInputFile{
+      margin-bottom: 0;
+    }
+    #picker {
+      float:left;
+      font-size: 14px;
+      width:40%;
+      height: 34px;
+      border-right:34px solid #e5006e;
+      margin-right:10px;      
+      padding: 6px 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="mask">
+    <h1><i class="fa fa-4x fa-frown-o"></i><br>此版本暫時不支援手機版</h1>
+  </div>
+  <!-- Navigation -->
+  <nav id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a id="menu-toggle" href="#" class="btn btn-lg"><i class="fa fa-bars"></i></a>
+      <a class="navbar-brand" href="#">
+        <img src="images/gash-logo.svg" alt="">
+      </a>
+    </div>
+    <!--上方選單-->
+    <ul id="mobile-nav" class="nav navbar-right top-nav dropup">
+      <!--我的專案-->
+      <li class="dropdown my-project">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-list-small-thumbnails" aria-hidden="true"></i>
+        </a>
+        <ul class="dropdown-menu message-dropdown">
+          <li class="project-sub">我的專案</li>
+          <div class="project-list">
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <!--我的帳號-->
+      <li class="dropdown my-account">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-user"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="project-sub">我的帳號</li>
+          <li class="message-preview">
+            <a href="#">
+              <div class="media">
+                <!-- 個人頭像-預設未來設定-隱藏-->
+                <span class="pull-left" style="display: none">
+                  <img class="img-responsive" src="images/project_default.png" alt="">
+                </span>
+                <!-- /.個人頭像-預設未來設定-隱藏-->
+                <div class="media-body">
+                  <h5 class="media-heading"><strong>John Smith</strong></h5>
+                  <p>樂點股份有限公司</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-envelope"></i> gash@gashpoint.com</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-gear"></i> 變更</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-footer">
+            <a href="#" class="btn btn-link"><i class="fa fa-fw fa-power-off"></i> 登出</a>
+          </li>
+        </ul>
+      </li>
+      <!--gotop-->
+      <li class="dropdown visible-xs">
+        <a id="gotop" href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="overlay"></div>
+    <!--左側選單-->
+    <ul id="sidebar-wrapper" class="nav navbar-nav side-nav">
+      <a id="menu-close" href="#" class="btn btn-lg"><i class="fa fa-times"></i></a>
+      <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#item01">
+          <i class="fa fa-tags"></i> CRMTag <i class="fa fa-fw fa-caret-down"></i>
+        </a>
+        <ul id="item01" class="collapse">
+          <li>
+            <a href="ListMaster.html">TAG名單管理</a>
+          </li>
+          <li>
+            <a href="TargetMaster.html">TAG行銷名單列表</a>
+          </li>
+          <li>
+            <a href="MissionMaster.html">發送任務</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.Navigation -->
+  <!-- container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">
+          <i class="fa fa-caret-right" aria-hidden="true"></i> 發送任務
+        </h1>
+        <!--四步驟-->
+        <div class="row bs-wizard" style="border-bottom:0;">
+          <div class="col-xs-3 bs-wizard-step complete">
+            <div class="text-center bs-wizard-stepnum">選擇任務類型</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+          </div>
+          <div class="col-xs-3 bs-wizard-step complete">
+            <div class="text-center bs-wizard-stepnum">發送對象設定</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+          </div>
+          <div class="col-xs-3 bs-wizard-step complete">
+            <div class="text-center bs-wizard-stepnum">發送時間設定</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+          </div>
+          <div class="col-xs-3 bs-wizard-step active">
+            <div class="text-center bs-wizard-stepnum">文案設定</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="bs-wizard-dot"></a>
+          </div>
+        </div>       
+        <!--/*四步驟-->
+        <div class="col-lg-8 col-sm-8 col-lg-offset-2 col-sm-offset-2">
+          <div class="thumbnail">
+            <h2 class="page-header">
+              文案設定 <span class="text-e5006e text-xs">*為必填</span></h2>
+              <!--表單內容-->
+              <form class="form-horizontal" action="">
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    <span class="text-e5006e">*</span>icon上傳
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info01"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <input type="file" name="" id="leInputFile">
+                    <p class="text-info text-xs">圖片尺寸為60*60，檔案格式為JPG、PNG</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    <span class="text-e5006e">*</span>圖檔上傳
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info02"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <input type="file" name="" id="leInputFile">
+                    <p class="text-info text-xs">圖片尺寸為640*320，檔案格式為JPG、PNG</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    背景顏色(上/下)
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info03"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <input id="picker" class="form-control picker-up" placeholder="上" type="text"></input>
+                    <input id="picker" class="form-control picker-down" placeholder="下" type="text"></input>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    背景顏色(左/右)
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info04"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <input id="picker" class="form-control picker-left" placeholder="左" type="text"></input>
+                    <input id="picker" class="form-control picker-right" placeholder="右" type="text"></input>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    任務發送通知
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info05"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <textarea rows="2" class="form-control" placeholder="限50字" maxlength="50"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    <span class="text-e5006e">*</span>任務名稱
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info06"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <textarea rows="1" class="form-control" placeholder="限11字" maxlength="11"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    <span class="text-e5006e">*</span>任務簡介
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info07"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <textarea rows="2" class="form-control" placeholder="限30字" maxlength="30"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    <span class="text-e5006e">*</span>詳細內文
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info08"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <textarea rows="5" class="form-control" placeholder="限500字" maxlength="500"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    宣傳網址
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info09"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="https://tw.gashpoint.com/">
+                    <p class="text-info text-xs">網址請包含http://或https://。例如 https://tw.gashpoint.com/</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    領取成功訊息
+                    <a href="JavaScript:;" class="text-info" data-toggle="modal" data-target="#Info10"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                  </label>
+                  <div class="col-sm-7">
+                    <textarea rows="2" class="form-control" placeholder="限50字" maxlength="50"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3" for="">
+                    <span class="text-e5006e">*</span>掛帳單位
+                  </label>
+                  <div class="col-sm-7">
+                    <select id="" name="" class="form-control">
+                      <option value="0">請選擇</option>
+                      <option value="1">掛帳單位1</option>
+                      <option value="2">掛帳單位2</option>
+                    </select>
+                  </div>
+                </div>                   
+                <div class="form-group"> 
+                  <div class="col-sm-7 col-sm-offset-3">
+                    <a href="MissionPreview.html" class="btn btn-default" target="_black">預覽</a>
+                  </div>
+                </div>
+              </form>
+              <hr>       
+              <div class="text-center">
+                <a href="MissionSetup_發點數.html" class="btn btn-black">上一步</a>
+                <a href="javascript:;" class="btn btn-e5006e" data-toggle="modal" data-target="#CheckInfo">下一步</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>©2018 GASH Co, Ltd. All Right Reserved.</p>
+        </div>
+      </div>
+    </footer>  
+  </body>
+  <!-- Modal -->
+  <div id="CheckInfo" class="modal fade remind" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <h3>預覽畫面是否已確認</h3>
+        </div>
+        <div class="modal-footer text-center">
+          <a href="javascript:;" class="btn btn-black" data-dismiss="modal">重新填寫</a>
+          <a href="MissionMaster.html" class="btn btn-e5006e">確認送出</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="Info01" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_01.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info02" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_02.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info03" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_03.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info04" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_11.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info05" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_04.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info06" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_05.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info07" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_06.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info08" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_07.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info09" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_08.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <div id="Info10" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xs">
+      <!-- Modal content-->
+      <div class="modal-content" style="border-radius: 35px; background-color: #464646;">
+          <img src="images/CardInfo_09.png" alt="" class="img-responsive">
+      </div>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/sidebar.js"></script>
+  <!-- tablesorter -->
+  <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+  <script type="text/javascript" src="js/jquery.tablesorter.widgets.js"></script>
+  <!-- tablesorter.pager -->
+  <script type="text/javascript" src="js/jquery.tablesorter.pager.js"></script>
+  <!-- Date Range Picker -->
+  <script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/daterangepicker.js"></script>
+  <!-- colpick 顏色選取 -->
+  <script type="text/javascript" src="js/colpick.js"></script>
+  <!-- validate 表單驗證 -->
+  <script type="text/javascript" src="js/jquery.validate.js"></script>
+  <script>
+  //Date Range Picker
+  $(function() {
+    $('input[name="daterange"]').daterangepicker({
+      timePicker: true,
+      timePicker24Hour: true,
+      timePickerSeconds: true,
+      singleDatePicker: true,
+      showDropdowns: false,  
+      opens: 'left',   
+      locale: {
+        format: 'YYYY/MM/DD/ H:mm:ss'
+      }
+    });
+  });
+
+  //顏色選取colpick
+  $('.picker-up').colpick({
+    layout:'hex',
+    submit:0,
+    colorScheme:'dark',
+    onChange:function(hsb,hex,rgb,el,bySetColor) {
+      $(el).css('border-color','#'+hex);
+    // Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+    if(!bySetColor) $(el).val(hex);
+  }
+})
+
+  $('.picker-down').colpick({
+    layout:'hex',
+    submit:0,
+    colorScheme:'dark',
+    onChange:function(hsb,hex,rgb,el,bySetColor) {
+      $(el).css('border-color','#'+hex);
+    // Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+    if(!bySetColor) $(el).val(hex);
+  }
+})
+
+  $('.picker-left').colpick({
+    layout:'hex',
+    submit:0,
+    colorScheme:'dark',
+    onChange:function(hsb,hex,rgb,el,bySetColor) {
+      $(el).css('border-color','#'+hex);
+    // Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+    if(!bySetColor) $(el).val(hex);
+  }
+})
+
+  $('.picker-right').colpick({
+    layout:'hex',
+    submit:0,
+    colorScheme:'dark',
+    onChange:function(hsb,hex,rgb,el,bySetColor) {
+      $(el).css('border-color','#'+hex);
+    // Fill the text box just if the color was set using the picker, and not the colpickSetColor function.
+    if(!bySetColor) $(el).val(hex);
+  }
+})
+
+  .keyup(function(){
+    $(this).colpickSetColor(this.value);
+  });
+
+  //統一時間
+  function TimeSetup() {
+    var checkTimeBox = document.getElementById("CheckTimeAll");
+    var CheckTime2 = document.getElementById("CheckTime2");
+    var CheckTime3 = document.getElementById("CheckTime3");
+    if (checkTimeBox.checked == false){
+      CheckTime2.style.display = "block";
+      CheckTime3.style.display = "block";
+    } else {
+      CheckTime2.style.display = "none";
+      CheckTime3.style.display = "none";
+    }
+  }
+
+  //統一面額
+  function PointSetup() {
+    var checkPointBox = document.getElementById("CheckPointAll");
+    var CheckPoint2 = document.getElementById("CheckPoint2");
+    var CheckPoint3 = document.getElementById("CheckPoint3");
+    if (checkPointBox.checked == false){
+      CheckPoint2.style.display = "block";
+      CheckPoint3.style.display = "block";
+    } else {
+      CheckPoint2.style.display = "none";
+      CheckPoint3.style.display = "none";
+    }
+  }
+  //發送面額設定
+  $('#Point1').change(function () {
+    var selected_option = $('#Point1').val();
+    if (selected_option === '3') {
+      $('#SetPoint1').attr('custom','1').show();
+    }
+    if (selected_option != '3') {
+      $('#SetPoint1').removeAttr('custom').hide();
+    }
+  });
+  $('#Point2').change(function () {
+    var selected_option = $('#Point2').val();
+    if (selected_option === '3') {
+      $('#SetPoint2').attr('custom','1').show();
+    }
+    if (selected_option != '3') {
+      $('#SetPoint2').removeAttr('custom').hide();
+    }
+  });
+  $('#Point3').change(function () {
+    var selected_option = $('#Point3').val();
+    if (selected_option === '3') {
+      $('#SetPoint3').attr('custom','1').show();
+    }
+    if (selected_option != '3') {
+      $('#SetPoint3').removeAttr('custom').hide();
+    }
+  });
+</script>
+</html>

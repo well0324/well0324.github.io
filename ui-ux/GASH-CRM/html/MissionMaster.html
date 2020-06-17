@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  <title>GASHTAG-發送任務</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- font-awesome CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- sidebar -->
+  <link href="css/sidebar.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- tablesorter -->
+  <link href="css/theme.dropbox.css" rel="stylesheet">   
+  <!-- tablesorter.pager -->
+  <link href="css/jquery.tablesorter.pager.css" type="text/css" rel="stylesheet"/>
+  <!-- daterangepicker -->
+  <link href="css/daterangepicker.css" rel="stylesheet" type="text/css" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  <style>
+  .thumbnail{
+    padding: 0px;
+  }
+  .tablesorter-dropbox{
+    margin-bottom: 0px;
+  }
+  .tablesorter-filter-row{
+    display:none;
+  }
+</style>
+</head>
+<body>
+  <div class="mask">
+    <h1><i class="fa fa-4x fa-frown-o"></i><br>此版本暫時不支援手機版</h1>
+  </div>
+  <!-- Navigation -->
+  <nav id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a id="menu-toggle" href="#" class="btn btn-lg"><i class="fa fa-bars"></i></a>
+      <a class="navbar-brand" href="#">
+        <img src="images/gash-logo.svg" alt="">
+      </a>
+    </div>
+    <!--上方選單-->
+    <ul id="mobile-nav" class="nav navbar-right top-nav dropup">
+      <!--我的專案-->
+      <li class="dropdown my-project">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-list-small-thumbnails" aria-hidden="true"></i>
+        </a>
+        <ul class="dropdown-menu message-dropdown">
+          <li class="project-sub">我的專案</li>
+          <div class="project-list">
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <!--我的帳號-->
+      <li class="dropdown my-account">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-user"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="project-sub">我的帳號</li>
+          <li class="message-preview">
+            <a href="#">
+              <div class="media">
+                <!-- 個人頭像-預設未來設定-隱藏-->
+                <span class="pull-left" style="display: none">
+                  <img class="img-responsive" src="images/project_default.png" alt="">
+                </span>
+                <!-- /.個人頭像-預設未來設定-隱藏-->
+                <div class="media-body">
+                  <h5 class="media-heading"><strong>John Smith</strong></h5>
+                  <p>樂點股份有限公司</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-envelope"></i> gash@gashpoint.com</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-gear"></i> 變更</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-footer">
+            <a href="#" class="btn btn-link"><i class="fa fa-fw fa-power-off"></i> 登出</a>
+          </li>
+        </ul>
+      </li>
+      <!--gotop-->
+      <li class="dropdown visible-xs">
+        <a id="gotop" href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="overlay"></div>
+    <!--左側選單-->
+    <ul id="sidebar-wrapper" class="nav navbar-nav side-nav">
+      <a id="menu-close" href="#" class="btn btn-lg"><i class="fa fa-times"></i></a>
+      <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#item01">
+          <i class="fa fa-tags"></i> CRMTag <i class="fa fa-fw fa-caret-down"></i>
+        </a>
+        <ul id="item01" class="collapse">
+          <li>
+            <a href="ListMaster.html">TAG名單管理</a>
+          </li>
+          <li>
+            <a href="TargetMaster.html">TAG行銷名單列表</a>
+          </li>
+          <li>
+            <a href="MissionMaster.html">發送任務</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.Navigation -->
+  <!-- container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">
+          <i class="fa fa-caret-right" aria-hidden="true"></i> 發送任務
+          <a href="MissionStyle.html" class="btn btn-sm btn-default" style="margin: -5px 0 0 10px">新增任務</a>
+        </h1>
+        <!--搜尋條件-->
+        <form class="form-horizontal" action="">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="">ID</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" placeholder="請輸入ID">
+            </div>
+            <label class="control-label col-sm-2" for="">任務名稱</label>            
+            <div class="col-sm-4">              
+              <input type="text" class="form-control" placeholder="請輸入任務名稱">
+            </div>
+          </div> 
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="">類型</label>
+            <div class="col-sm-4">
+              <select name="" class="form-control">
+                <option value="">請選擇</option>
+                <option value="">發點數</option>
+                <option value="">發序號</option>
+                <option value="">發專屬序號</option>
+              </select>
+            </div>
+            <label class="control-label col-sm-2" for="">發送時間</label>            
+            <div class="col-sm-2">              
+              <input type="text" class="form-control" name="daterange"/>
+            </div>
+            <div class="col-sm-2 rangemarker">              
+              <input type="text" class="form-control " name="daterange"/>
+            </div>
+          </div>        
+          <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+              <button class="btn btn-default">重設</button>
+              <button class="btn btn-black">查詢</button>
+            </div>
+          </div>
+        </form>
+        <hr>
+        <!--／*搜尋條件-->
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- pager -->
+            <div id="pager" class="pager">
+              <form>
+                <img src="images/first.png" class="first"/>
+                <img src="images/prev.png" class="prev"/>
+                <!-- the "pagedisplay" can be any element, including an input -->
+                <span class="pagedisplay" data-pager-output-filtered="第 {startRow} ~ {endRow} 筆 / 共 {filteredRows} 筆"></span>
+                <img src="images/next.png" class="next"/>
+                <img src="images/last.png" class="last"/>
+                <span>，顯示</span>
+                <select class="pagesize">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="40">40</option>
+                  <option value="all">全部</option>
+                </select>
+                <span>筆資料</span>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="thumbnail">
+          <table id="MissionMaster" class="tablesorter tablesorter-dropbox table-striped">
+            <thead>
+              <th>ID</th>
+              <th>任務名稱</th>
+              <th>類型</th>
+              <th>發送人數</th>
+              <th>領取人數</th>
+              <th>發送時間</th>
+              <th>狀態</th>
+              <th>建立人</th>
+              <th style="width: 80px;">檢視名單</th>
+              <th style="width: 80px;">領取名單</th>
+              <th style="width: 80px;">刪除</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>00000001</td>
+                <td>任務名稱1</td>
+                <td>發點數</td>
+                <td>200</td>
+                <td>200</td>
+                <td>2018/1/17 HH:MM:SS</td>
+                <td>正常</td>
+                <td>帳號名稱1</td>
+                <td><a href="MissionDetail_發點數.html"><i class="fa fa-search" aria-hidden="true"></i></a></td>
+                <td><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></td>
+                <td><a href="javascript:;"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+              </tr>
+              <tr>
+                <td>00000002</td>
+                <td>任務名稱2</td>
+                <td>發序號</td>
+                <td>100</td>
+                <td>100</td>
+                <td>2018/1/18 HH:MM:SS</td>
+                <td>正常</td>
+                <td>帳號名稱2</td>
+                <td><a href="MissionDetail_發序號.html"><i class="fa fa-search" aria-hidden="true"></i></a></td>
+                <td><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></td>
+                <td><a href="javascript:;"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+              </tr>
+              <tr>
+                <td>00000003</td>
+                <td>任務名稱3</td>
+                <td>發專屬序號</td>
+                <td>150</td>
+                <td>150</td>
+                <td>2018/1/19 HH:MM:SS</td>
+                <td>刪除</td>
+                <td>帳號名稱3</td>
+                <td><a href="MissionDetail_發專屬序號.html"><i class="fa fa-search" aria-hidden="true"></i></a></td>
+                <td><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></td>
+                <td><a href="javascript:;"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- pager -->
+        <div id="pager" class="pager">
+          <form>
+            <img src="images/first.png" class="first"/>
+            <img src="images/prev.png" class="prev"/>
+            <!-- the "pagedisplay" can be any element, including an input -->
+            <span class="pagedisplay" data-pager-output-filtered="第 {startRow} ~ {endRow} 筆 / 共 {filteredRows} 筆"></span>
+            <img src="images/next.png" class="next"/>
+            <img src="images/last.png" class="last"/>
+            <span>，顯示</span>
+            <select class="pagesize">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="all">全部</option>
+            </select>
+            <span>筆資料</span>
+          </form>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>©2018 GASH Co, Ltd. All Right Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="js/sidebar.js"></script>
+<!-- tablesorter -->
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.widgets.js"></script>
+<!-- tablesorter.pager -->
+<script type="text/javascript" src="js/jquery.tablesorter.pager.js"></script>
+<!-- Date Range Picker -->
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/daterangepicker.js"></script>
+<script>
+  //Date Range Picker
+  $(function() {
+    $('input[name="daterange"]').daterangepicker({
+      timePicker: false,
+      timePicker24Hour: false,
+      timePickerSeconds: false,
+      singleDatePicker: true,
+      showDropdowns: false,  
+      opens: 'left',   
+      locale: {
+        format: 'YYYY/MM/DD'
+      }
+    });
+  });
+
+  //tablesorter
+  $(function(){
+    $("#MissionMaster").tablesorter({
+      theme : 'blue',
+      sortList : [[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0]],
+      headers: { 
+        8: { sorter: false},
+        9: { sorter: false},
+        10: { sorter: false},
+      },
+      headerTemplate : '{content}{icon}',
+      duplicateSpan : true, // default setting
+      widthFixed: true,
+      widgets : [ 'zebra', 'filter' ],
+      widgetOptions : {
+        filter_external: 'input.search',
+        filter_reset: '.reset',
+        filter_searchDelay : 300,
+        filter_hideFilters : false,
+      }
+    })
+    .tablesorterPager({container: $("#pager")});
+
+    // **********************************
+    //  Description of ALL pager options
+    // **********************************
+    var pagerOptions = {
+
+    // target the pager markup - see the HTML block below
+    container: $(".pager"),
+
+    // use this url format "http:/mydatabase.com?page={page}&size={size}&{sortList:col}"
+    ajaxUrl: null,
+
+    // modify the url after all processing has been applied
+    customAjaxUrl: function(table, url) { return url; },
+
+    // ajax error callback from $.tablesorter.showError function
+    // ajaxError: function( config, xhr, settings, exception ){ return exception; };
+    // returning false will abort the error message
+    ajaxError: null,
+
+    // add more ajax settings here
+    // see http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
+    ajaxObject: { dataType: 'json' },
+
+    // process ajax so that the data object is returned along with the total number of rows
+    ajaxProcessing: null,
+
+    // Set this option to false if your table data is preloaded into the table, but you are still using ajax
+    processAjaxOnInit: true,
+
+    // output string - default is '{page}/{totalPages}'
+    // possible variables: {size}, {page}, {totalPages}, {filteredPages}, {startRow}, {endRow}, {filteredRows} and {totalRows}
+    // also {page:input} & {startRow:input} will add a modifiable input in place of the value
+    // In v2.27.7, this can be set as a function
+    // output: function(table, pager) { return 'page ' + pager.startRow + ' - ' + pager.endRow; }
+    output: '第 {startRow} ~ {endRow} 筆 / 共 {totalRows} 筆',
+
+    // apply disabled classname (cssDisabled option) to the pager arrows when the rows
+    // are at either extreme is visible; default is true
+    updateArrows: true,
+
+    // starting page of the pager (zero based index)
+    page: 0,
+
+    // Number of visible rows - default is 10
+    size: 10,
+
+    // Save pager page & size if the storage script is loaded (requires $.tablesorter.storage in jquery.tablesorter.widgets.js)
+    savePages : true,
+
+    // Saves tablesorter paging to custom key if defined.
+    // Key parameter name used by the $.tablesorter.storage function.
+    // Useful if you have multiple tables defined
+    storageKey:'tablesorter-pager',
+
+    // Reset pager to this page after filtering; set to desired page number (zero-based index),
+    // or false to not change page at filter start
+    pageReset: 0,
+
+    // if true, the table will remain the same height no matter how many records are displayed. The space is made up by an empty
+    // table row set to a height to compensate; default is false
+    fixedHeight: true,
+
+    // remove rows from the table to speed up the sort of large tables.
+    // setting this to false, only hides the non-visible rows; needed if you plan to add/remove rows with the pager enabled.
+    removeRows: false,
+
+    // If true, child rows will be counted towards the pager set size
+    countChildRows: false,
+
+    // css class names of pager arrows
+    cssNext: '.next', // next page arrow
+    cssPrev: '.prev', // previous page arrow
+    cssFirst: '.first', // go to first page arrow
+    cssLast: '.last', // go to last page arrow
+    cssGoto: '.gotoPage', // select dropdown to allow choosing a page
+
+    cssPageDisplay: '.pagedisplay', // location of where the "output" is displayed
+    cssPageSize: '.pagesize', // page size selector - select dropdown that sets the "size" option
+
+    // class added to arrows when at the extremes (i.e. prev/first arrows are "disabled" when on the first page)
+    cssDisabled: 'disabled', // Note there is no period "." in front of this class name
+    cssErrorRow: 'tablesorter-errorRow' // ajax error information row
+
+  };
+
+  $("table")
+    // bind to pager events
+    // *********************
+    .bind('pagerChange pagerComplete pagerInitialized pageMoved', function(e, c){
+      var msg = '"</span> event triggered, ' + (e.type === 'pagerChange' ? 'going to' : 'now on') +
+      ' page <span class="typ">' + (c.page + 1) + '/' + c.totalPages + '</span>';
+      $('#display')
+      .append('<li><span class="str">"' + e.type + msg + '</li>')
+      .find('li:first').remove();
+    })
+
+    // initialize the pager plugin
+    // ****************************
+    .tablesorterPager(pagerOptions);
+
+    // Add two new rows using the "addRows" method
+    // the "update" method doesn't work here because not all rows are
+    // present in the table when the pager is applied ("removeRows" is false)
+    // ***********************************************************************
+    var r, $row, num = 50,
+    row = '<tr><td>Student{i}</td><td>{m}</td><td>{g}</td><td>{r}</td><td>{r}</td><td>{r}</td><td>{r}</td><td><button type="button" class="remove" title="Remove this row">X</button></td></tr>' +
+    '<tr><td>Student{j}</td><td>{m}</td><td>{g}</td><td>{r}</td><td>{r}</td><td>{r}</td><td>{r}</td><td><button type="button" class="remove" title="Remove this row">X</button></td></tr>';
+    $('button:contains(Add)').click(function(){
+      // add two rows of random data!
+      r = row.replace(/\{[gijmr]\}/g, function(m){
+        return {
+          '{i}' : num + 1,
+          '{j}' : num + 2,
+          '{r}' : Math.round(Math.random() * 100),
+          '{g}' : Math.random() > 0.5 ? 'male' : 'female',
+          '{m}' : Math.random() > 0.5 ? 'Mathematics' : 'Languages'
+        }[m];
+      });
+      num = num + 2;
+      $row = $(r);
+      $('table')
+      .find('tbody').append($row)
+      .trigger('addRows', [$row]);
+      return false;
+    });
+
+    // Delete a row
+    // *************
+    $('table').delegate('button.remove', 'click' ,function(){
+      var t = $('table');
+      // disabling the pager will restore all table rows
+      // t.trigger('disablePager');
+      // remove chosen row
+      $(this).closest('tr').remove();
+      // restore pager
+      // t.trigger('enablePager');
+      t.trigger('update');
+      return false;
+    });
+
+    // Destroy pager / Restore pager
+    // **************
+    $('button:contains(Destroy)').click(function(){
+      // Exterminate, annhilate, destroy! http://www.youtube.com/watch?v=LOqn8FxuyFs
+      var $t = $(this);
+      if (/Destroy/.test( $t.text() )){
+        $('table').trigger('destroyPager');
+        $t.text('Restore Pager');
+      } else {
+        $('table').tablesorterPager(pagerOptions);
+        $t.text('Destroy Pager');
+      }
+      return false;
+    });
+
+    // Disable / Enable
+    // **************
+    $('.toggle').click(function(){
+      var mode = /Disable/.test( $(this).text() );
+      $('table').trigger( (mode ? 'disable' : 'enable') + 'Pager');
+      $(this).text( (mode ? 'Enable' : 'Disable') + 'Pager');
+      return false;
+    });
+    $('table').bind('pagerChange', function(){
+      // pager automatically enables when table is sorted.
+      $('.toggle').text('Disable Pager');
+    });
+
+    // clear storage (page & size)
+    $('.clear-pager-data').click(function(){
+      // clears user set page & size from local storage, so on page
+      // reload the page & size resets to the original settings
+      $.tablesorter.storage( $('table'), 'tablesorter-pager', '' );
+    });
+
+    // go to page 1 showing 10 rows
+    $('.goto').click(function(){
+      // triggering "pageAndSize" without parameters will reset the
+      // pager to page 1 and the original set size (10 by default)
+      // $('table').trigger('pageAndSize')
+      $('table').trigger('pageAndSize', [1, 10]);
+    });
+
+  });
+</script>
+</html>

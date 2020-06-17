@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>GASHTAG</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- font-awesome CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- tablesorter -->
+  <link href="css/theme.dropbox.css" rel="stylesheet">   
+  <!-- tablesorter.pager -->
+  <link href="css/jquery.tablesorter.pager.css" type="text/css" rel="stylesheet"/>
+  <!-- selectize -->
+  <link href="css/selectize.default.css" rel="stylesheet">
+  <!-- datepicker 日期-->
+  <link href="css/datepicker.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]
+  -->
+  <style>
+    #TargetAdd.tablesorter-dropbox{
+      margin-bottom: 10px;
+    }
+    #TargetAdd.tablesorter-dropbox thead{
+      margin-bottom: 10px;
+    }
+    #TargetAdd.tablesorter-dropbox td{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0px;
+    }
+    #TargetAdd.tablesorter-dropbox .form-control{
+      font-size:12px;
+    }
+    .selectize-control.form-control{
+      padding: 0;
+    }
+    .selectize-dropdown.form-control{
+      padding: 0;
+      height:auto;
+    }
+    h3.page-header{
+      font-size:18px;
+      font-weight: bold;
+      margin: 20px 0 20px;
+    }
+    h3.page-header:before{
+      content:"\f0da";
+      font-family: FontAwesome;
+      padding-right: 0.5em;
+    }
+    .panel.panel-default .panel-heading label{
+      font-size:19px;
+      font-weight: bold;
+      line-height:1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="mask">
+    <h1><i class="fa fa-4x fa-frown-o"></i><br>此版本暫時不支援手機版</h1>
+  </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="">GASH</span>TAG</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-menu">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="ListManager.html"><i class="fa fa-tags"></i> TAG名單管理</a>
+          </li>
+          <li>
+            <a href="TargetList.html"><i class="fa fa-list-alt"></i> 行銷名單列表</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-user"></i> John</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-sign-out"></i> 登出</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header"><i class="fa fa-pencil-square-o"></i> 編輯行銷名單</h1>
+        <form action="" class="form-horizontal">
+          <!--自訂行銷名單名稱-->
+          <div class="panel-name">
+            <label for="">行銷名單：</label>
+            <input class="form-control inline-block" type="text" id="" placeholder="自訂行銷名單名稱" style="width:40%;">
+          </div>
+          <!--組合1-->
+          <div class="panel panel-default">
+            <!--組合名稱-->
+            <div class="panel-heading">
+              <label for="">組合1：</label>
+              <input class="form-control inline-block" type="text" id="" placeholder="自訂組合名稱" style="width:40%;">
+            </div>
+            <!--組合內容-->
+            <div class="panel-body">
+              <!--APP登入時間-->
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <h3 class="page-header">APP登入時間</h3>
+                </div>
+                <label for="" class="col-sm-1 control-label">開始時間</label>
+                <div class="col-sm-5">                
+                  <div class="input-group date">
+                    <input id="start1" type="text" class="form-control datepicker" placeholder="">
+                    <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                </div>
+                <label for="" class="col-sm-1 control-label">結束時間</label>
+                <div class="col-sm-5">                
+                  <div class="input-group date">
+                    <input id="end1" type="text" class="form-control datepicker" placeholder="">
+                    <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-1 control-label">天數下限</label>
+                <div class="col-sm-5">                  
+                  <input id="" type="text" class="form-control" placeholder="" style="width: auto;">
+                </div>
+                <label for="" class="col-sm-1 control-label">天數上限</label>
+                <div class="col-sm-5">                  
+                  <input id="" type="text" class="form-control" placeholder="" style="width: auto;"> 
+                </div>
+              </div>
+              <!--扣點金額-->
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <h3 class="page-header">扣點金額</h3>
+                </div>
+                <label for="" class="col-sm-1 control-label">開始時間</label>
+                <div class="col-sm-5">                  
+                  <div class="input-group date">
+                    <input id="start2" type="text" class="form-control datepicker" placeholder="">
+                    <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                </div>
+                <label for="" class="col-sm-1 control-label">結束時間</label>
+                <div class="col-sm-5">                  
+                  <div class="input-group date">
+                    <input id="end2" type="text" class="form-control datepicker" placeholder="">
+                    <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-1 control-label">金額下限</label>
+                <div class="col-sm-5">                  
+                  <input id="" type="text" class="form-control" placeholder="" style="width: auto;">
+                </div>
+                <label for="" class="col-sm-1 control-label">金額上限</label>
+                <div class="col-sm-5">
+                  <input id="" type="text" class="form-control" placeholder="" style="width: auto;"> 
+                </div>
+              </div>
+              <!--扣點CP-->
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <h3 class="page-header">扣點CP</h3>
+                </div>                
+                <label for="" class="col-sm-1 control-label">開始時間</label>
+                <div class="col-sm-5">
+                  <div class="input-group date">
+                    <input id="start3" type="text" class="form-control datepicker" placeholder="">
+                    <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                </div>                
+                <label for="" class="col-sm-1 control-label">結束時間</label>
+                <div class="col-sm-5">
+                  <div class="input-group date">
+                    <input id="end3" type="text" class="form-control datepicker" placeholder="">
+                    <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">                
+                <label for="" class="col-sm-1 control-label">選擇CP</label>
+                <div class="col-sm-10">
+                  <select name="list" multiple class="form-control textarea-cp">
+                    <option value="">CP名稱</option>
+                    <option value="">CP名稱</option>
+                    <option value="">CP名稱</option>
+                    <option value="">CP名稱</option>
+                    <option value="">CP名稱</option>
+                    <option value="">CP名稱</option>
+                  </select>
+                  <div class="btn-cp-position">
+                    <a href="javascript:;" class="btn btn-default"><i class="fa fa-plus"></i></a>
+                    <a href="javascript:;" class="btn btn-default"><i class="fa fa-minus"></i></a>
+                  </div>                  
+                  <select name="cp" multiple class="form-control textarea-cp"></select>
+                </div>
+              </div>
+              <!--組合TAG-->
+              <h3 class="page-header">組合TAG</h3>
+              <table id="TargetAdd" class="tablesorter-dropbox">
+                <thead>
+                  <tr>
+                    <th>大類</th>
+                    <th>中類</th>
+                    <th>TAG</th>
+                    <th style="width: 100px"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!--TAG1-->
+                  <tr>
+                    <td>
+                      <select id="select-first"  class="form-control" placeholder="請選擇大類">
+                        <option value="">請選擇大類</option>
+                        <option>用戶身分</option>
+                        <option>使用服務</option>
+                        <option>遊戲喜好</option>
+                      </select>
+                    </td>
+                    <td>                  
+                      <select id="select-second" class="form-control" placeholder="請選擇中類">
+                        <option value="">請選擇中類</option>
+                        <option value="1">item1</option>
+                        <option value="2">item2</option>
+                        <option value="3">item3</option>
+                        <option value="4">item4</option>
+                        <option value="5">item5</option>
+                        <option value="6">item6</option>
+                        <option value="7">item7</option>
+                        <option value="8">item8</option>
+                        <option value="9">item9</option>
+                        <option value="10">item10</option>
+                      </select>                  
+                    </td>                
+                    <td>
+                      <select id="select-tag" class="form-control" placeholder="請選擇TAG">
+                        <option value="">請選擇TAG</option>
+                        <option value="1">TAG1</option>
+                        <option value="2">TAG2</option>
+                        <option value="3">TAG3</option>
+                        <option value="4">TAG4</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select id="" class="form-control">
+                        <option value="">and</option>
+                        <option value="">or</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <!--TAG2-->
+                  <tr>
+                    <td>
+                      <select id=""  class="form-control" placeholder="請選擇大類">
+                        <option value="">請選擇大類</option>
+                        <option>用戶身分</option>
+                        <option>使用服務</option>
+                        <option>遊戲喜好</option>
+                      </select>
+                    </td>
+                    <td>                  
+                      <select id="" class="form-control" placeholder="請選擇中類">
+                        <option value="">請選擇中類</option>
+                        <option value="1">item1</option>
+                        <option value="2">item2</option>
+                        <option value="3">item3</option>
+                        <option value="4">item4</option>
+                        <option value="5">item5</option>
+                        <option value="6">item6</option>
+                        <option value="7">item7</option>
+                        <option value="8">item8</option>
+                        <option value="9">item9</option>
+                        <option value="10">item10</option>
+                      </select>                  
+                    </td>                
+                    <td>
+                      <select id="" class="form-control" placeholder="請選擇TAG">
+                        <option value="">請選擇TAG</option>
+                        <option value="1">TAG1</option>
+                        <option value="2">TAG2</option>
+                        <option value="3">TAG3</option>
+                        <option value="4">TAG4</option>
+                      </select>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="text-right" style="text-align: right">填入下方欄位</td>
+                    <td>
+                      <select id="" class="form-control" placeholder="請選擇欄位">
+                        <option value="1">欄位1</option>
+                        <option value="2">欄位2</option>
+                        <option value="3">欄位3</option>
+                      </select>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-sm btn-black" style="margin-top: -4px; height: 32px;">填入</button>
+                    </td>
+                  </tr>        
+                </tbody>
+              </table>
+              <!--組合條件-->
+              <table id="TargetAdd" class="tablesorter-dropbox">
+                <thead>
+                  <tr>
+                    <th>欄位1</th>
+                    <th style="width: 100px"></th>
+                    <th>欄位2</th>
+                    <th style="width: 100px"></th>
+                    <th>欄位3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="text" id="combo-tag1" class="combo-tag" value="awesome" style="width: 200px; border: 1px solid #d0d0d0;">
+                    </td>
+                    <td>
+                      <select id="" class="form-control">
+                        <option value="">and</option>
+                        <option value="">or</option>
+                      </select>
+                    </td>                
+                    <td>
+                      <input type="text" id="combo-tag2" class="combo-tag" value="awesome" style="width: 200px; border: 1px solid #d0d0d0;">
+                    </td>
+                    <td>排除</td>
+                    <td>
+                      <input type="text" id="combo-tag3" class="combo-tag" value="awesome" style="width: 200px; border: 1px solid #d0d0d0;">
+                    </td>
+                  </tr>       
+                </tbody>
+              </table>
+            </div>
+            <!--取樣人數-->
+            <div class="panel-footer">
+              <div class="row">
+                <div class="col-sm-6 random-number">符合人數：1000</div>
+                <div class="col-sm-6">取樣人數：<input class="form-control inline-block" type="text" id="" placeholder="1000" style="width:auto;"></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>©2018 GASH Co, Ltd. All Right Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- /.container -->
+</body>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- tablesorter -->
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.widgets.js"></script>
+<!-- tablesorter.pager -->
+<script type="text/javascript" src="js/jquery.tablesorter.pager.js"></script>
+<!--[if IE 8]><script src="js/es5.js"></script><![endif]-->
+<script src="js/selectize.js"></script>
+<!-- datepicker 日期-->
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+  //日期選擇器
+  $('#start1').datepicker();
+  $('#end1').datepicker();
+  $('#start2').datepicker();
+  $('#end2').datepicker();
+  $('#start3').datepicker();
+  $('#end3').datepicker();
+
+  //TAG選擇
+
+  //選擇大類
+  $('#select-first').selectize({
+    allowEmptyOption: false,
+    create: false
+  });
+
+  //選擇中類
+  $('#select-second').selectize({
+    allowEmptyOption: false,
+    create: false
+  });
+  //選擇TAG
+  $('#select-tag').selectize({
+    allowEmptyOption: false,
+    create: false
+  });
+  //組合TAG
+  $('#combo-tag1').selectize({
+    allowEmptyOption: false,
+    create: false,
+  });
+  $('#combo-tag2').selectize({
+    allowEmptyOption: false,
+    create: false,
+  });
+  $('#combo-tag3').selectize({
+    allowEmptyOption: false,
+    create: false,
+  });
+
+</script>
+</html>

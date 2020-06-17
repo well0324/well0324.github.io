@@ -1,0 +1,402 @@
+/* ---reset.css--- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ---reset.css--- */
+
+body {
+	font-family:"Roboto", "PingFang TC", "Microsoft JhengHei", sans-serif;
+	padding: 60px 0 90px 0;
+	background-color: #f7f7f7;
+}
+
+a.navbar-brand:link, a.navbar-brand:hover, a.navbar-brand:visited, a.navbar-brand:active{
+	color:#fff;
+	font-size:1.6em;
+	font-weight: bolder;
+}
+
+a, a:link, a:visited, a:active{ color:#555;}
+a:hover, a.btn-link:hover{ color:#e5006e;}
+.text-e5006e{ color: #e5006e;}
+.text-info , a.text-info , a.text-info:link, a.text-info:visited, a.text-info:active{ color:#a1a1a1;}
+a.text-info:hover{ color:#e5006e;}
+.navbar-brand span{
+	color:#E5006E;
+}
+.text-xs{
+	font-size:1em;
+	line-height:1.5;
+	margin: 5px 0;
+}
+
+h1.page-header{
+	font-size:24px;
+	font-weight: bold;
+	border-bottom:0;
+}
+h2.page-header{
+	font-size:20px;
+	font-weight: bold;
+	border-bottom:0;
+}
+.toolbar-right{
+	text-align:right;
+	margin-bottom: 20px;
+}
+.toolbar-right .input-group{
+	width:50%;
+	margin-left:5px;
+	float:right;
+}
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group{
+	outline: none;
+}
+
+.btn-e5006e, .btn-e5006e:link{
+	color: #fff;
+	background-color: #e5006e;
+	border-color: #f2dede;
+}
+.btn-e5006e:visited, .btn-e5006e:active{
+	color: #fff;
+	background-color: #e5006e;
+	border-color: #f2dede;
+	box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5) inset;;
+}
+.btn-e5006e:hover{
+	color: #fff;
+	background-color: #ce0063;
+}
+
+.btn-black, .btn-black:link, .btn-black:focus{
+	color: #fff;
+	background-color: #555;
+	border-color: #696969;
+}
+
+.btn-black:visited, .btn-black:active{
+	color: #fff;
+	background-color: #555;
+	border-color: #696969;
+	box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5) inset;;
+}
+.btn-black:hover{
+	color: #fff;
+	background-color: #000;
+}
+.breadcrumb {
+	padding: 0px;
+	margin-bottom: 40px;
+	background-color: transparent;
+}
+.breadcrumb>.active{
+	color:#555;
+}
+.breadcrumb .text-e5006e{
+	font-size:12px;
+}
+
+.label-e5006e {
+	font-size:50%;
+	background-color: #e5006e;
+	padding:5px;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+.control-label{
+	font-size:15px;
+	line-height:1.3;
+}
+
+input[type=file] {
+    font-size: 13px;
+    line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: px;
+    height: 34px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.hr-combo {
+	margin: 40px -30px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.mask{
+	display:none;
+	width: 100%;
+	height: 100vh;
+	background-color:#222;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	text-align:center;
+}
+.mask h1{
+	display:block;
+	width: 300px;
+	height: 120px;
+	position:absolute;
+	top: 50%;
+	left:50%;
+	margin-top: -60px;
+	margin-left: -150px;
+	color:#fff;
+}
+.mask i{
+	color:#e5006e;
+	margin-bottom: 20px;
+}
+.panel-name{
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+.panel-name label{
+	font-size: 21px;
+	font-weight: bold;
+}
+.panel.panel-default .panel-heading{
+	background-color:#ddd;
+}
+.panel-body{
+	padding: 30px;
+}
+.panel-footer{
+	font-size: 18px;
+	font-weight: bold;
+	padding: 30px;
+	background-color: #fff;   
+}
+.inline-block{
+	display:inline-block;
+}
+.random-number{
+	padding: 6px 12px;
+	line-height: 1.42857143;
+}
+
+.textarea-cp{
+	width:320px;
+	height: 200px!important;
+	padding: 0;
+	float:left;
+}
+.textarea-cp option{
+	color:#555;
+	padding: 6px 12px;
+}
+
+select option:hover, 
+select option:focus, 
+select option:active, 
+select option:checked{
+
+}
+
+.btn-cp-position{
+	width:50px;
+	height: 200px;
+	line-height: 100px;
+	margin: 0 20px;
+	text-align:center;
+	vertical-align: middle;
+	position:relative;
+	float:left;
+}
+.btn-cp-position a{
+	margin:0;
+}
+
+.combo-tag .selectize-input{
+	top: 12px;
+	width: 250px;
+	height: 36px;
+	border: 1px solid #d0d0d0;
+	line-height: 36px!important;
+}
+.combo-tag .selectize-input .item{
+	line-height: 1.5;
+}
+.combo-tag .selectize-input.has-items {
+	padding-top: 0px!important;
+}
+.combo-tag .selectize-dropdown{
+	top:45px!important;
+}
+.modal h1{
+	margin: 10px 0;
+}
+.modal h1:before{
+	content:"名稱：";
+}
+.modal .checkbox label{
+	font-size:15px;
+}
+.modal input[type=checkbox]{
+	margin-top: 2px;
+}
+.choice{
+	border-bottom:1px solid #ddd;
+}
+.choice .checkbox label{
+	font-size: 18px;
+	font-weight: bold;
+}
+.text-xs{
+	font-size:12px;
+}
+.text-danger{
+	color:#e5006e;
+}
+
+
+.modal-xs{
+	width: 20%;
+}
+
+.modal-sm{
+	width: 30%;
+}
+
+.modal-lg{
+	width: 70%;
+}
+
+.modal-title{
+	font-size: 1.2em;
+    font-weight: bold;
+}
+
+.modal-footer.text-center{
+	text-align:center!important;
+}
+
+.remind .modal-content{
+	padding: 30px 20px;
+}
+
+.remind .modal-body h3{
+	font-size:1.2em;
+	font-weight: bold;
+}
+
+.remind .modal-dialog, .remind .modal-footer{
+	text-align:center;
+}
+.remind .modal-footer{
+	border-top:0;
+}
+.pager{
+	margin-bottom: 15px!important;
+}
+/* daterange */
+.rangemarker:before{
+	content:'~';
+	position: absolute;
+	line-height: 2;
+	left: -6px;
+	color: #555;
+}
+/* 發送任務四步驟 */
+.bs-wizard {margin-top: 40px;}
+
+/*Form Wizard*/
+.bs-wizard {
+	border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;
+}
+.bs-wizard > .bs-wizard-step {
+	padding: 0; position: relative;
+}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+	color: #595959; font-size: 16px; margin-bottom: 5px;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+	position: absolute; width: 30px; height: 30px; display: block;
+	background: #fbe8aa; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;
+} 
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+	content: ' '; width: 14px; height: 14px; background: #e5006e; border-radius: 50px;
+	position: absolute; top: 8px; left: 8px;
+} 
+.bs-wizard > .bs-wizard-step > .progress {
+	position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 25px 0;
+}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #fbe8aa;}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #ddd;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+.progress{ background-color: #dddddd;}
+.bs-wizard > .bs-wizard-step.active > .bs-wizard-stepnum{ color:#e5006e;}
+
+/* Footer */
+footer {
+	position:fixed;
+	left: 0;
+	right: 0;
+	bottom:0;    
+	padding: 10px 0;
+	color:#999;
+	font-size:12px;
+	background-color:#000;
+	text-align:center;
+	z-index:998;
+}
+@media screen and (max-width:767px){
+	.mask{
+		display:block;
+		z-index: 9999;
+	}
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  <title>GASHTAG-發送任務</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- font-awesome CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- sidebar -->
+  <link href="css/sidebar.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- tablesorter -->
+  <link href="css/theme.dropbox.css" rel="stylesheet">   
+  <!-- tablesorter.pager -->
+  <link href="css/jquery.tablesorter.pager.css" type="text/css" rel="stylesheet"/>
+  <!-- daterangepicker -->
+  <link href="css/daterangepicker.css" rel="stylesheet" type="text/css" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  <style>
+  h2.page-header{
+    margin:0 0 15px 0px;
+    padding: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="mask">
+    <h1><i class="fa fa-4x fa-frown-o"></i><br>此版本暫時不支援手機版</h1>
+  </div>
+  <!-- Navigation -->
+  <nav id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a id="menu-toggle" href="#" class="btn btn-lg"><i class="fa fa-bars"></i></a>
+      <a class="navbar-brand" href="#">
+        <img src="images/gash-logo.svg" alt="">
+      </a>
+    </div>
+    <!--上方選單-->
+    <ul id="mobile-nav" class="nav navbar-right top-nav dropup">
+      <!--我的專案-->
+      <li class="dropdown my-project">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-list-small-thumbnails" aria-hidden="true"></i>
+        </a>
+        <ul class="dropdown-menu message-dropdown">
+          <li class="project-sub">我的專案</li>
+          <div class="project-list">
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <!--我的帳號-->
+      <li class="dropdown my-account">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-user"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="project-sub">我的帳號</li>
+          <li class="message-preview">
+            <a href="#">
+              <div class="media">
+                <!-- 個人頭像-預設未來設定-隱藏-->
+                <span class="pull-left" style="display: none">
+                  <img class="img-responsive" src="images/project_default.png" alt="">
+                </span>
+                <!-- /.個人頭像-預設未來設定-隱藏-->
+                <div class="media-body">
+                  <h5 class="media-heading"><strong>John Smith</strong></h5>
+                  <p>樂點股份有限公司</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-envelope"></i> gash@gashpoint.com</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-gear"></i> 變更</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-footer">
+            <a href="#" class="btn btn-link"><i class="fa fa-fw fa-power-off"></i> 登出</a>
+          </li>
+        </ul>
+      </li>
+      <!--gotop-->
+      <li class="dropdown visible-xs">
+        <a id="gotop" href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="overlay"></div>
+    <!--左側選單-->
+    <ul id="sidebar-wrapper" class="nav navbar-nav side-nav">
+      <a id="menu-close" href="#" class="btn btn-lg"><i class="fa fa-times"></i></a>
+      <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#item01">
+          <i class="fa fa-tags"></i> CRMTag <i class="fa fa-fw fa-caret-down"></i>
+        </a>
+        <ul id="item01" class="collapse">
+          <li>
+            <a href="ListMaster.html">TAG名單管理</a>
+          </li>
+          <li>
+            <a href="TargetMaster.html">TAG行銷名單列表</a>
+          </li>
+          <li>
+            <a href="MissionMaster.html">發送任務</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.Navigation -->
+  <!-- container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">
+          <i class="fa fa-caret-right" aria-hidden="true"></i> 檢視名單
+        </h1>
+        <div class="clearfix">
+          <h2 class="page-header pull-left">發送時間設定</h2>
+          <p class="pull-right" style="margin-top:4px;">預計花費：<span class="text-e5006e">0</span>pt.</p>
+        </div>
+        <table id="" class="tablesorter-dropbox" style="margin-bottom: 40px">
+          <thead>
+            <tr>
+              <th style="width: 50px;">編號</th>
+              <th>發送對象</th>
+              <th style="width: 10%">發送人數</th>
+              <th style="width: 35%">發送時間 / 截止時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--名單-->
+            <tr>
+              <td>01</td>
+              <td>行銷名單1</td>                
+              <td>50</td>
+              <td>2018/05/30/ 0:00:00 ~ 2018/05/31/ 23:59:59</td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <h2 class="page-header">
+            文案設定<a href="MissionPreview.html" class="btn btn-sm btn-default" style="margin: -5px 0 0 10px" target="_blank">預覽</a>
+          </h2>
+        </div>
+        <table id="" class="tablesorter-dropbox">
+          <thead>
+            <tr>
+              <th style="width: 150px;">項目</th>
+              <th>內容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--名單-->
+            <tr>
+              <td>icon上傳</td>
+              <td>icon.jpg</td>
+            </tr>
+            <tr>
+              <td>圖檔上傳</td>
+              <td>圖檔.jpg</td>
+            </tr>
+            <tr>
+              <td>背景顏色(上/下)</td>
+              <td>上: #000000 / 下: #000000</td>
+            </tr>
+            <tr>
+              <td>背景顏色(左/右)</td>
+              <td>左: #000000 / 右: #000000</td>
+            </tr>
+            <tr>
+              <td>任務發送通知</td>
+              <td>50字</td>
+            </tr>
+            <tr>
+              <td>任務名稱</td>
+              <td>11字</td>
+            </tr>
+            <tr>
+              <td>任務簡介</td>
+              <td>30字</td>
+            </tr>
+            <tr>
+              <td>詳細內文</td>
+              <td>500字</td>
+            </tr>
+            <tr>
+              <td>宣傳網址</td>
+              <td>http://tw.gashpoint.com/</td>
+            </tr>
+            <tr>
+              <td>領取成功訊息</td>
+              <td>50字</td>
+            </tr>
+            <tr>
+              <td>掛帳單位</td>
+              <td>GTW</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <div class="text-center">
+          <a href="MissionMaster.html" class="btn btn-black">返回</a>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>©2018 GASH Co, Ltd. All Right Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="js/sidebar.js"></script>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  <title>GASHTAG-編輯TAG名單</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- font-awesome CSS -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- sidebar -->
+  <link href="css/sidebar.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- tablesorter -->
+  <link href="css/theme.dropbox.css" rel="stylesheet">   
+  <!-- tablesorter.pager -->
+  <link href="css/jquery.tablesorter.pager.css" type="text/css" rel="stylesheet"/>
+  <!-- selectize -->
+  <link href="css/selectize.default.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]
+  -->
+  <style>
+  #ListAdd.tablesorter-dropbox{
+    margin-bottom: 10px;
+  }
+  #ListAdd.tablesorter-dropbox thead{
+    margin-bottom: 10px;
+  }
+  #ListAdd.tablesorter-dropbox td{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+  }
+  #ListAdd.tablesorter-dropbox .form-control{
+    font-size:12px;
+  }
+  .selectize-control.form-control{
+    padding: 0;
+  }
+  .selectize-dropdown.form-control{
+    padding: 0;
+    height:auto;
+  }
+  h2.page-header{
+    margin: 20px 0px;
+    padding: 0;
+  }
+  .thumbnail{
+    padding: 30px;
+  }
+</style>
+</head>
+<body>
+  <div class="mask">
+    <h1><i class="fa fa-4x fa-frown-o"></i><br>此版本暫時不支援手機版</h1>
+  </div>
+  <!-- Navigation -->
+  <nav id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <a id="menu-toggle" href="#" class="btn btn-lg"><i class="fa fa-bars"></i></a>
+      <a class="navbar-brand" href="#">
+        <img src="images/gash-logo.svg" alt="">
+      </a>
+    </div>
+    <!--上方選單-->
+    <ul id="mobile-nav" class="nav navbar-right top-nav dropup">
+      <!--我的專案-->
+      <li class="dropdown my-project">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-list-small-thumbnails" aria-hidden="true"></i>
+        </a>
+        <ul class="dropdown-menu message-dropdown">
+          <li class="project-sub">我的專案</li>
+          <div class="project-list">
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+
+              </a>
+            </li>
+            <li class="project-item">
+              <a href="#">                                
+                <img class="img-responsive" src="images/project_default.png" alt="">
+                <p>專案名稱...</p>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <!--我的帳號-->
+      <li class="dropdown my-account">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fui-user"></i>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="project-sub">我的帳號</li>
+          <li class="message-preview">
+            <a href="#">
+              <div class="media">
+                <!-- 個人頭像-預設未來設定-隱藏-->
+                <span class="pull-left" style="display: none">
+                  <img class="img-responsive" src="images/project_default.png" alt="">
+                </span>
+                <!-- /.個人頭像-預設未來設定-隱藏-->
+                <div class="media-body">
+                  <h5 class="media-heading"><strong>John Smith</strong></h5>
+                  <p>樂點股份有限公司</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-envelope"></i> gash@gashpoint.com</p>
+                  <p class="small text-muted"><i class="fa fa-fw fa-gear"></i> 變更</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-footer">
+            <a href="#" class="btn btn-link"><i class="fa fa-fw fa-power-off"></i> 登出</a>
+          </li>
+        </ul>
+      </li>
+      <!--gotop-->
+      <li class="dropdown visible-xs">
+        <a id="gotop" href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="overlay"></div>
+    <!--左側選單-->
+    <ul id="sidebar-wrapper" class="nav navbar-nav side-nav">
+      <a id="menu-close" href="#" class="btn btn-lg"><i class="fa fa-times"></i></a>
+      <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#item01">
+          <i class="fa fa-tags"></i> CRMTag <i class="fa fa-fw fa-caret-down"></i>
+        </a>
+        <ul id="item01" class="collapse">
+          <li>
+            <a href="ListMaster.html">TAG名單管理</a>
+          </li>
+          <li>
+            <a href="TargetMaster.html">TAG行銷名單列表</a>
+          </li>
+          <li>
+            <a href="MissionMaster.html">發送任務</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.Navigation -->
+  <!-- Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header"><i class="fa fa-caret-right" aria-hidden="true"></i> 編輯TAG名單</h1>
+        <div class="thumbnail">
+          <form action="" class="form-horizontal">
+            <!--step1-->
+            <h2 class="page-header">
+              <label class="label label-e5006e pull-left">STEP1</label>上傳用戶名單
+            </h2>
+            <div class="form-group">
+              <label for="leInputFile" class="col-sm-2 control-label">上傳用戶名單</label>
+              <div class="col-sm-10">
+                <input type="file" name="" id="leInputFile">
+                <a type="submit" class="btn btn-sm btn-black hide">上傳</a>                          
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-sm-2 control-label">名單建立原因</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" type="text" id="" placeholder="請輸入100字內的名單建立原因，範例：資料來源_資料內容_資料時間區間" maxlength="100" row="3"></textarea>
+              </div>
+            </div>
+            <br>
+            <!--step2-->
+            <h2 class="page-header">
+              <label class="label label-e5006e pull-left">STEP2</label>設定TAG分類 <span class="text-e5006e" style="font-size: 12px">*TAG上限為20個</span>
+            </h2>
+            <!--預設5個TAG欄位-->
+            <table id="ListAdd" class="tablesorter-dropbox">
+              <thead>
+                <tr>
+                  <th>大類</th>
+                  <th>中類</th>
+                  <th>TAG</th>
+                  <th style="width: 80px">刪除</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--TAG1-->
+                <tr>
+                  <td>
+                    <select id="select-first"  class="form-control" placeholder="請選擇大類">
+                      <option value="">請選擇大類</option>
+                      <option>用戶身分</option>
+                      <option>使用服務</option>
+                      <option>遊戲喜好</option>
+                    </select>
+                  </td>
+                  <td>                  
+                    <select id="select-second" class="form-control" placeholder="請選擇中類">
+                      <option value="">請選擇中類</option>
+                      <option value="1">item1</option>
+                      <option value="2">item2</option>
+                      <option value="3">item3</option>
+                      <option value="4">item4</option>
+                      <option value="5">item5</option>
+                      <option value="6">item6</option>
+                      <option value="7">item7</option>
+                      <option value="8">item8</option>
+                      <option value="9">item9</option>
+                      <option value="10">item10</option>
+                    </select>                  
+                  </td>                
+                  <td>
+                    <select id="select-tag" class="form-control" placeholder="請選擇TAG">
+                      <option value="">請選擇TAG</option>
+                      <option value="1">TAG1</option>
+                      <option value="2">TAG2</option>
+                      <option value="3">TAG3</option>
+                      <option value="4">TAG4</option>
+                    </select>
+                  </td>
+                  <td><input id="checkBox" type="checkbox" class=""></td>
+                </tr>
+                <!--TAG2-->
+                <tr>
+                  <td>
+                    <select id=""  class="form-control" placeholder="請選擇大類">
+                      <option value="">請選擇大類</option>
+                      <option>用戶身分</option>
+                      <option>使用服務</option>
+                      <option>遊戲喜好</option>
+                    </select>
+                  </td>
+                  <td>                  
+                    <select id="" class="form-control" placeholder="請選擇中類">
+                      <option value="">請選擇中類</option>
+                      <option value="1">item1</option>
+                      <option value="2">item2</option>
+                      <option value="3">item3</option>
+                      <option value="4">item4</option>
+                      <option value="5">item5</option>
+                      <option value="6">item6</option>
+                      <option value="7">item7</option>
+                      <option value="8">item8</option>
+                      <option value="9">item9</option>
+                      <option value="10">item10</option>
+                    </select>                  
+                  </td>                
+                  <td>
+                    <select id="" class="form-control" placeholder="請選擇TAG">
+                      <option value="">請選擇TAG</option>
+                      <option value="1">TAG1</option>
+                      <option value="2">TAG2</option>
+                      <option value="3">TAG3</option>
+                      <option value="4">TAG4</option>
+                    </select>
+                  </td>
+                  <td><input id="checkBox" type="checkbox" class=""></td>
+                </tr>
+                <!--TAG3-->
+                <tr>
+                  <td>
+                    <select id=""  class="form-control" placeholder="請選擇大類">
+                      <option value="">請選擇大類</option>
+                      <option>用戶身分</option>
+                      <option>使用服務</option>
+                      <option>遊戲喜好</option>
+                    </select>
+                  </td>
+                  <td>                  
+                    <select id="" class="form-control" placeholder="請選擇中類">
+                      <option value="">請選擇中類</option>
+                      <option value="1">item1</option>
+                      <option value="2">item2</option>
+                      <option value="3">item3</option>
+                      <option value="4">item4</option>
+                      <option value="5">item5</option>
+                      <option value="6">item6</option>
+                      <option value="7">item7</option>
+                      <option value="8">item8</option>
+                      <option value="9">item9</option>
+                      <option value="10">item10</option>
+                    </select>                  
+                  </td>                
+                  <td>
+                    <select id="" class="form-control" placeholder="請選擇TAG">
+                      <option value="">請選擇TAG</option>
+                      <option value="1">TAG1</option>
+                      <option value="2">TAG2</option>
+                      <option value="3">TAG3</option>
+                      <option value="4">TAG4</option>
+                    </select>
+                  </td>
+                  <td><input id="checkBox" type="checkbox" class=""></td>
+                </tr>
+                <!--TAG4-->
+                <tr>
+                  <td>
+                    <select id=""  class="form-control" placeholder="請選擇大類">
+                      <option value="">請選擇大類</option>
+                      <option>用戶身分</option>
+                      <option>使用服務</option>
+                      <option>遊戲喜好</option>
+                    </select>
+                  </td>
+                  <td>                  
+                    <select id="" class="form-control" placeholder="請選擇中類">
+                      <option value="">請選擇中類</option>
+                      <option value="1">item1</option>
+                      <option value="2">item2</option>
+                      <option value="3">item3</option>
+                      <option value="4">item4</option>
+                      <option value="5">item5</option>
+                      <option value="6">item6</option>
+                      <option value="7">item7</option>
+                      <option value="8">item8</option>
+                      <option value="9">item9</option>
+                      <option value="10">item10</option>
+                    </select>                  
+                  </td>                
+                  <td>
+                    <select id="" class="form-control" placeholder="請選擇TAG">
+                      <option value="">請選擇TAG</option>
+                      <option value="1">TAG1</option>
+                      <option value="2">TAG2</option>
+                      <option value="3">TAG3</option>
+                      <option value="4">TAG4</option>
+                    </select>
+                  </td>
+                  <td><input id="checkBox" type="checkbox" class=""></td>
+                </tr>
+                <!--TAG5-->
+                <tr>
+                  <td>
+                    <select id=""  class="form-control" placeholder="請選擇大類">
+                      <option value="">請選擇大類</option>
+                      <option>用戶身分</option>
+                      <option>使用服務</option>
+                      <option>遊戲喜好</option>
+                    </select>
+                  </td>
+                  <td>                  
+                    <select id="" class="form-control" placeholder="請選擇中類">
+                      <option value="">請選擇中類</option>
+                      <option value="1">item1</option>
+                      <option value="2">item2</option>
+                      <option value="3">item3</option>
+                      <option value="4">item4</option>
+                      <option value="5">item5</option>
+                      <option value="6">item6</option>
+                      <option value="7">item7</option>
+                      <option value="8">item8</option>
+                      <option value="9">item9</option>
+                      <option value="10">item10</option>
+                    </select>                  
+                  </td>                
+                  <td>
+                    <select id="" class="form-control" placeholder="請選擇TAG">
+                      <option value="">請選擇TAG</option>
+                      <option value="1">TAG1</option>
+                      <option value="2">TAG2</option>
+                      <option value="3">TAG3</option>
+                      <option value="4">TAG4</option>
+                    </select>
+                  </td>
+                  <td><input id="checkBox" type="checkbox" class=""></td>
+                </tr>
+              </tbody>
+            </table>
+            <!--上限20個TAG，達上限後按鈕隱藏-->
+            <div class="text-right">
+              <button type="button" class="btn btn-sm btn-default remove" style="margin-right: 10px;">刪除TAG</button>
+              <button type="button" class="btn btn-sm btn-black add" style="margin-right: 10px;">新增TAG</button>
+            </div>
+            <!--step3-->
+            <h2 class="page-header">
+              <label class="label label-e5006e pull-left">STEP3</label>設定名單狀態
+            </h2>
+            <div class="form-group">            
+              <label class="col-sm-2 control-label" for="">狀態</label>
+              <div  class="col-sm-3">
+                <select class="form-control" id="">
+                  <option>有效</option>
+                  <option>無效</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="text-center">
+              <a href="ListMaster.html" type="submit" class="btn btn-black">取消</a>
+              <a href="ListMaster.html" type="submit" class="btn btn-e5006e">儲存</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>©2018 GASH Co, Ltd. All Right Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="js/sidebar.js"></script>
+<!-- tablesorter -->
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.widgets.js"></script>
+<!-- tablesorter.pager -->
+<script type="text/javascript" src="js/jquery.tablesorter.pager.js"></script>
+<!-- selectize -->
+<!--[if IE 8]><script src="js/es5.js"></script><![endif]-->
+<script src="js/selectize.js"></script>
+<script>
+  //新增TAG條件
+  $(function() {
+    $('.add').click(function(){
+    // add rows
+    var row = '<tr><td><select id="" class="form-control" placeholder="請選擇大類"><option value="">請選擇大類</option><option>用戶身分</option><option>使用服務</option><option>遊戲喜好</option></select></td><td><select id="" class="form-control" placeholder="請選擇中類"><option value="">請選擇中類</option><option value="1">item1</option><option value="2">item2</option><option value="3">item3</option><option value="4">item4</option></select></td><td><select id="" class="form-control" placeholder="請選擇TAG"><option value="">請選擇TAG</option><option value="1">TAG1</option><option value="2">TAG2</option><option value="3">TAG3</option><option value="4">TAG4</option></select></td><td><input id="checkBox" type="checkbox"></td></tr>'
+    $row = $(row),
+      // resort table using the current sort; set to false to prevent resort, otherwise
+      // any other value in resort will automatically trigger the table resort.
+      resort = true;
+      $('table')
+      .find('tbody').append($row)
+      .trigger('addRows', [$row, resort]);
+      return false;
+    });
+    // Delete a row
+    $('table').delegate('button.remove', 'click' ,function() {
+      var t = $('table');
+      // disabling the pager will restore all table rows
+      // t.trigger('disablePager');
+      // remove chosen row
+      $(this).closest('tr').remove();
+      // restore pager
+      // t.trigger('enablePager');
+      t.trigger('update');
+      return false;
+    });
+  });
+  //選擇大類
+  $('#select-first').selectize({
+    allowEmptyOption: false,
+    create: false
+  });
+
+  //選擇中類
+  $('#select-second').selectize({
+    allowEmptyOption: false,
+    create: true
+  });
+  //選擇TAG
+  $('#select-tag').selectize({
+    allowEmptyOption: false,
+    create: true
+  });
+</script>
+</html>
