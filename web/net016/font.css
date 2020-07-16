@@ -1,0 +1,131 @@
+BODY {	SCROLLBAR-FACE-COLOR: #E5BA3A; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #ffffff; SCROLLBAR-3DLIGHT-COLOR: #336699; SCROLLBAR-ARROW-COLOR: #FCE9AF; SCROLLBAR-TRACK-COLOR: #FCE9AF; SCROLLBAR-DARKSHADOW-COLOR: #336699
+}
+.news {  font-size:12px}
+.news A:link{
+	color:#990000; text-decoration: underline}
+.news A:visited{
+	color:#660066; text-decoration: underline}
+.news A:hover{
+	color:#FF9900; text-decoration: none}
+
+.menu {
+}
+.menu A:link{
+text-decoration: none; color: #000099
+}
+.menu A:visited{
+text-decoration: none; color: #990099
+}
+.menu A:hover{
+text-decoration: underline; color: #FF6600
+}
+
+.top {
+	font-size:12px
+}
+.top A:link{
+	color:#003399
+; text-decoration: underline}
+.top A:visited{
+	color:#660000
+; text-decoration: underline
+}
+.top A:hover{
+	color:#FF0000
+; text-decoration: none
+}
+
+.content-2 {
+	font-size:12px
+}
+.content-2 A:link{
+	color:#666666
+}
+.content-2 A:visited{
+	color:#636363
+}
+.content-2 A:hover{
+	color:red
+}.big {  font-size: 15px}
+.HeadLineA:active {
+	font-size: 12px;
+	line-height: 20px;
+	color: #000099;
+}
+.HeadLineA:link {
+	font-size: 12px;
+	line-height: 20px;
+	color: #000099;
+}
+.HeadLineA:visited {
+	font-size: 12px;
+	line-height: 20px;
+	color: #000099;
+}
+.HeadLineA:hover {
+	font-size: 12px;
+	line-height: 20px;
+	color: #000099;
+}
+
+.HeadLineMoveA{
+    font-size: 12px;
+	line-height: 24px;
+	width: 135px;
+}
+
+
+.DailyGoodsIntro {
+	color: #464646;
+	font-size: 12px;
+	line-height: 16px;
+}
+.DailyGoodsName {
+	color: #7A492C;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 28px;
+	text-decoration: none;
+	text-align: left;
+}
+
+.cattitle {
+	color: #7A492C;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 28px;
+	text-align: left;
+}
+
+.cattitle1 {
+	color: #7A492C;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 28px;
+	text-align: left;
+}
+
+.DailyOnsaleTitle {
+	font-size: 13px;
+	font-weight: bolder;
+	color: #990000;
+}
+.DailyOnsale {
+	font-size: 13px;
+	font-weight: bolder;
+	color: #FF0000;
+}
+
+.lef {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+td {
+	font-size: 12px;
+
+	
+}
+a {
+	font-size: 12px;
+}
