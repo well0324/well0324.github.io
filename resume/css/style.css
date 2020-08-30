@@ -14,7 +14,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
-  background-color: #485274;
+  background-color: #333;
 }
 
 a {
@@ -151,7 +151,7 @@ Main Components
   left: 0;
   height: 80px;
   width: 100%;
-  background-color: #000000;
+  background-color:#28396d;
   visibility: hidden;
   /* enable a 3D-space for children elements */
   -webkit-perspective: 1000px;
@@ -188,7 +188,7 @@ Main Components
   /* this is the 3D rotating navigation */
   position: relative;
   height: 100%;
-  background-color: #343c55;
+  background-color:#28396d;
   /* Force Hardware Acceleration */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -613,6 +613,10 @@ main.nav-is-visible {
 .img-border{ border:6px double #FFF;}
 .title{ font-size:1.5em}
 .page-header{ font-size:1em;}
+
+.page-header{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4)!important;
+}
 .footer{ width:50px; padding:10px; background-color:#212635; position:fixed; bottom:0; right:10px; text-align:center; color:#FFF; border-radius: 4px 4px 0 0 }
 
 .experience-header {
