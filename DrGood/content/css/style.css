@@ -1,0 +1,397 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template/modern-business)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*body{ padding-bottom: 80px;}*/
+
+/* header */
+#mainNav {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgb(0, 30, 47, 0.8);
+  /*背景模糊*/
+  -webkit-backdrop-filter: blur(5px);	
+  backdrop-filter: blur(5px);	
+}
+#mainNav .navbar-toggler {
+  padding: 0.75rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.75rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #2AB5CD;
+  border: 0;
+  outline:none;
+}
+#mainNav .navbar-brand {
+  color: #fff;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+#mainNav .navbar-brand img {
+  height: 2rem;
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.0625em;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #2AB5CD;
+}
+
+#mainNav .navbar-toggler, .form-control, .btn, .input-group-lg .custom-select {
+  border-radius: 50px;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border: none;
+    background-color: transparent;
+    /*背景模糊*/
+    -webkit-backdrop-filter: blur(0px); 
+    backdrop-filter: blur(0px); 
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand img {
+    height: 2.7rem;
+    transition: height 0.3s ease-in-out;
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background-color: rgb(0, 30, 47, 0.8);
+    /*背景模糊*/
+    -webkit-backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px); 
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+  }
+  #mainNav.navbar-shrink .navbar-brand svg, #mainNav.navbar-shrink .navbar-brand img {
+    height: 2rem;
+  }
+  #mainNav .navbar-nav .nav-item {
+    margin-right: 1rem;
+  }
+  #mainNav .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+}
+header.masthead {
+  position: relative;
+  padding-top: 7.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../assets/img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 13rem;
+    padding-bottom: 10.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .3;
+}
+
+.no-select{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  color: #6d757d;
+  background: #fff;
+}
+.input-group-prepend .custom-select{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; 
+}
+
+
+.head-default::before{
+  content: "\f4b3";
+  font-family: "bootstrap-icons";
+  float: left;
+  margin-right: 5px;
+  margin-top: -4px;
+  font-size: 21px;
+}
+
+/*footer*/
+footer{
+  /*position: fixed;
+  bottom: 0;*/
+  width: 100%;
+  color: rgb(255, 255, 255, 50%);
+  font-size: 0.2rem;
+  text-align: center;
+  padding: 0.7rem 0 0.5rem 0;
+}
+footer .container .list-inline .list-inline-item::after{
+  content: '|';
+  color: rgb(255, 255, 255, 50%);
+  padding-left: 20px;
+  padding-right: 5px;
+}
+footer .container .list-inline .list-inline-item:last-child::after{
+  display: none;
+}
+footer .container .list-inline .list-inline-item a{
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255, 50%);
+}
+footer .container .list-inline .list-inline-item a:hover{
+  color: #2AB5CD;
+}
+@media (min-width: 768px) {
+  footer{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+/*search*/
+#division1, #area1{
+  width: 105px;
+  background-color: #E8F4F1;
+}
+
+/*card*/
+.card{
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-header{
+  height: 80px;
+  margin-bottom: 30px;
+}
+.position-head{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+}
+.position-head img{
+  border-radius: 50px;
+  max-width: 100%;
+  height: auto; 
+}
+.position-badge{
+  position: absolute;
+  top: -6px;
+  right: 0px;
+}
+.badge-area{
+  margin-right: -4px;
+  font-weight: normal;
+  border-radius: 0;
+  border-bottom-left-radius:0.25rem;
+  background-color: #00A483;
+}
+.badge-division{
+  font-weight: normal;
+  border-radius: 0;
+  border-top-right-radius:0.25rem;
+  background-color: #20c997;
+}
+.card .card-body .card-text, .card .card-footer ul{
+  padding-left: 0;
+}
+.card .card-body .card-text li{
+  list-style-type: none;
+  position: relative;
+  padding: 0 0 0.5em 1.8em;
+}
+.card .card-footer ul li{
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+}
+.hospital::before{
+  content: "\f404";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  margin-top: -2px;
+  font-size: 19px;
+}
+.name::before{
+  content: "\f4b3";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  margin-top: -2px;
+  font-size: 19px;
+}
+.phone::before{
+  content: "\f583";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  margin-top: -1px;
+  font-size: 17px;
+}
+.card-text .hospital p, .card-text .name p, .card-text .phone p{
+  margin-bottom: 0;
+}
+.card-text .hospital p::before, .card-text .name p::before, .card-text .phone p::before{
+  content: "|";
+  color: #666;
+  float: left;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+.recommend{
+  float: left;
+}
+.favorite{
+  float: right;
+}
+.recommend::before{
+  content: "推薦";
+  color: #999999;
+  font-size: 12px;
+}
+.favorite::before{
+  content: "收藏";
+  color: #999999;
+  font-size: 12px;
+}
+.bi-star, .bi-heart{
+  color: #999999 ;
+}
+.bi-star-fill, .bi-star-half{
+  color: #fd7e14;
+}
+.bi-heart-fill{
+  color: #fd7e14;
+}
+
+/* add favorite */
+.fav-btn {
+  display: block;
+  width: 26px;
+  height: 26px;
+  float: right;
+  margin-top: -1px;
+  text-align: end;
+}
+
+@keyframes favme-anime {
+  0% {
+    opacity: 1;
+    font-size: 1rem;
+    -webkit-text-stroke-color: transparent;
+  }
+  25% {
+    opacity: 0.6;
+    color: #FFF;
+    font-size: 0.8rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #DC3232;
+  }
+  75% {
+    opacity: 0.6;
+    color: #FFF;
+    font-size: 1.3rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #DC3232;
+  }
+  100% {
+    opacity: 1;
+    font-size: 1.2rem;
+    -webkit-text-stroke-color: transparent;
+  }
+}
+@keyframes favme-hover {
+  from {
+    font-size: 1.3rem;
+  }
+  80% {
+    font-size: 1.2rem;
+  }
+}
+.favme {
+  display: block;
+  font-size: 1.2rem;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  color: #CBCDCE;
+  margin: 0;
+}
+.favme.active {
+  color: #DC3232;
+}
+.favme:hover {
+  animation: favme-hover 0.3s infinite alternate;
+}
+.favme.is_animating {
+  animation: favme-anime 0.3s;
+}

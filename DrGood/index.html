@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Dr. Good好醫生</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="content/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Custom Css -->
+  <link href="content/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="content/assets/logo/logo-light.svg" alt=""></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">首頁</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">內科</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">外科</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                會員中心
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="#">收藏</a>
+              <a class="dropdown-item" href="#">問卷</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link head head-default" href="#">登入</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- header -->
+  <header class="masthead bg-primary">
+    <div class="overlay"></div>
+    <div class="container">
+      <!-- <div class="masthead-heading">It's Nice To Meet You</div> -->
+      <div class="row">
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="row">  
+              <div class="input-group input-group-lg mb-3 col-md-6">
+                <div class="input-group-prepend">
+                  <select id="division1" class="custom-select custom-select-lg">
+                    <option value="0">科別</option>
+                    <option value="1">內科</option>
+                    <option value="2">外科</option>
+                    <option value="3">中醫</option>
+                  </select>
+                </div>
+                <select id="division2" class="custom-select no-select">
+                  <option selected>不分科</option>
+                </select>
+              </div>
+              <div class="input-group input-group-lg mb-3 col-md-6">
+                <div class="input-group-prepend">
+                  <select id="area1" class="custom-select custom-select-lg">
+                    <option value="0">區域</option>
+                    <option value="1">基隆市</option>
+                    <option value="2">台北市</option>
+                    <option value="3">新北市</option>
+                    <option value="4">桃園市</option>
+                    <option value="5">新竹市</option>
+                    <option value="6">新竹縣</option>
+                    <option value="7">苗栗縣</option>
+                    <option value="8">台中市</option>
+                    <option value="9">彰化縣</option>
+                    <option value="10">南投縣</option>
+                    <option value="11">雲林縣</option>
+                    <option value="12">嘉義市</option>
+                    <option value="13">嘉義縣</option>
+                    <option value="14">台南市</option>
+                    <option value="15">高雄市</option>
+                    <option value="16">屏東線</option>
+                    <option value="17">台東縣</option>
+                    <option value="18">花蓮縣</option>
+                    <option value="19">宜蘭縣</option>
+                    <option value="20">澎湖縣</option>
+                    <option value="21">金門縣</option>
+                    <option value="22">連江縣</option>
+                  </select>
+                </div>
+                <select id="area2" class="custom-select no-select">
+                  <option selected>不分區</option>
+                </select>
+              </div>
+              <div class="input-group mb-3 col">
+                <input type="text" class="form-control form-control-lg" placeholder="請輸入關鍵字" aria-label="請輸入關鍵字" aria-describedby="button-keyword">
+                <div class="input-group-append">
+                  <button class="btn btn-lg btn-info" type="submit" id="button-keyword">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /.header -->
+
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h3 class="mt-4 mb-3">熱搜推薦
+      <small class="badge bg-danger">HOT</small>
+    </h3>
+    <!-- Marketing Icons Section -->
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="position-badge">
+              <small class="badge badge-area success">台北市</small>
+              <small class="badge badge-division">科別四字</small>
+            </div>
+            <div class="position-head">
+              <img src="content/assets/img/img-head-default.jpg" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="card-text">
+              <li class="hospital"><p>鄭文宗耳鼻喉科診所</p></li>
+              <li class="name"><p>鄭文宗</p></li>
+              <li class="phone"><p>0912-345-678</p></li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li class="recommend">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </li>
+              <li class="favorite">
+                <div class="fav-btn"><i class="favme bi bi-heart-fill"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="position-badge">
+              <small class="badge badge-area success">台北市</small>
+              <small class="badge badge-division">科別四字</small>
+            </div>
+            <div class="position-head">
+              <img src="content/assets/img/img-head-default.jpg" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="card-text">
+              <li class="hospital"><p>鄭文宗耳鼻喉科診所</p></li>
+              <li class="name"><p>鄭文宗</p></li>
+              <li class="phone"><p>0912-345-678</p></li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li class="recommend">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </li>
+              <li class="favorite">
+                <div class="fav-btn"><i class="favme bi bi-heart-fill"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="position-badge">
+              <small class="badge badge-area success">台北市</small>
+              <small class="badge badge-division">科別四字</small>
+            </div>
+            <div class="position-head">
+              <img src="content/assets/img/img-head.jpg" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="card-text">
+              <li class="hospital"><p>鄭文宗耳鼻喉科診所</p></li>
+              <li class="name"><p>鄭文宗</p></li>
+              <li class="phone"><p>0912-345-678</p></li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li class="recommend">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </li>
+              <li class="favorite">
+                <div class="fav-btn"><i class="favme bi bi-heart-fill"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="position-badge">
+              <small class="badge badge-area success">台北市</small>
+              <small class="badge badge-division">科別四字</small>
+            </div>
+            <div class="position-head">
+              <img src="content/assets/img/img-head.jpg" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="card-text">
+              <li class="hospital"><p>鄭文宗耳鼻喉科診所</p></li>
+              <li class="name"><p>鄭文宗</p></li>
+              <li class="phone"><p>0912-345-678</p></li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <ul>
+              <li class="recommend">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </li>
+              <li class="favorite">
+                <div class="fav-btn"><i class="favme bi bi-heart-fill"></i></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="bg-dark">
+    <div class="container">
+      <ul class="m-0 text-center text-white list-inline">
+        <li class="list-inline-item"><a href="#">合作聯絡</a></li>
+        <li class="list-inline-item"><a href="#">關於Dr. Good</a></li>
+        <li class="list-inline-item"><a href="#">免責聲明</a></li>
+      </ul>
+      <p class="m-0">Copyright &copy; 2021 www.findoctor.com.tw All rights reserved.</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS-->
+  <script src="content/js/header.js"></script>
+  <script src="content/js/search.js"></script>
+  <script src="content/js/favorite.js"></script>
+</body>
+</html>
