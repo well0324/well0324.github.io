@@ -270,6 +270,11 @@ footer .container .list-inline .list-inline-item a:hover{
 .searchbar .row .input-group-lg, .searchbar .row .input-group-lg .custom-select, .searchbar .row .input-group .form-control{
   height: 60px;
 }
+@media (max-width: 768px) {
+  .searchbar .row .input-group-lg, .searchbar .row .input-group-lg .custom-select, .searchbar .row .input-group .form-control{
+    height: 50px;
+  }
+}
 
 /*card*/
 .card{
@@ -410,6 +415,12 @@ footer .container .list-inline .list-inline-item a:hover{
 }
 .recommend .bi-star-fill, .recommend .bi-star-half{
   color: #fd7e14;
+}
+
+@media (max-width: 768px) {
+  .card .card-header .position-badge .badge{
+    font-size: 90%;
+  }
 }
 
 /* add favorite */
