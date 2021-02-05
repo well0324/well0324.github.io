@@ -237,7 +237,8 @@ $("#area1").change(function(){
             $icon = $(this).find('i');
             $icon.data('loader-icons', $icon.attr('class'))
             $icon.removeAttr('class');
-            $icon.addClass("fa").addClass("fa-spin").addClass("fa-spinner");
+            $icon.addClass("spinner-border");
+            //$icon.addClass("fa").addClass("fa-spin").addClass("fa-spinner");
         });
     }
     $.fn.stopLoading = function() {
