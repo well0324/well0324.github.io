@@ -204,8 +204,9 @@ a.dropdown-item:hover{
 /*footer*/
 footer{
   width: 100%;
-  color: #999;
+  color: #ccc;
   font-size: 0.2rem;
+  font-weight: normal;
   text-align: center;
   padding: 0.7rem 0 0.5rem 0;
 }
@@ -224,7 +225,7 @@ footer .container .list-inline .list-inline-item:last-child::after{
 }
 footer .container .list-inline .list-inline-item a{
   font-size: 0.9rem;
-  color:#999;
+  color:#b5b5b5;
 }
 footer .container .list-inline .list-inline-item a:hover{
   color: #2AB5CD;
