@@ -87,18 +87,27 @@
     <h3 class="mb-4">問券主題文字標題</h3>
     <div class="alert alert-light QA">
       <div class="row">
-        <div class="col-sm-9 mb-2">
-          <i class="bi bi-question-circle-fill"></i> 問題1：Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit atque quis laboriosam omnis inventore aut architecto esse et consequuntur perspiciatis libero doloribus autem animi, quos illo sint quo necessitatibus veritatis?
+        <div class="col-sm-9">
+          <p><i class="bi bi-question-circle-fill"></i> 問題1：Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit atque quis laboriosam omnis inventore aut architecto esse et consequuntur perspiciatis libero doloribus autem animi, quos illo sint quo necessitatibus veritatis?</p>
         </div>
         <div class="col-sm-3 text-center">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-            <label class="form-check-label" for="gridRadios1">是</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-            <label class="form-check-label" for="gridRadios2">否</label>
-          </div>
+          <button type="button" class="btn_choose_sent">
+            <input type="radio" name="QA1"/>是
+          </button>
+          <button type="button" class="btn_choose_sent">
+            <input type="radio" name="QA1"/>否
+          </button>
+        </div>
+        <div class="col-12">
+          <button type="button" class="btn_choose_sent d-block btn_choose_QA">
+            <input type="radio" name="QA2" checked />選擇A Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Ad nulla repellendus, facere totam, voluptatem sapiente tempora ea, suscipit quasi ipsam possimus distinctio harum porro voluptatum itaque nihil aliquid! Labore, quasi?
+          </button>
+          <button type="button" class="btn_choose_sent d-block btn_choose_QA">
+            <input type="radio" name="QA2" />選擇B Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Cum dolores natus officia ad, quae alias optio quia dolor eius cupiditate dolorem omnis ratione, facere, numquam delectus ipsam odio maiores? Inventore.
+          </button>
+          <button type="button" class="btn_choose_sent d-block btn_choose_QA">
+            <input type="radio" name="QA2" />選擇C Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, reprehenderit? Provident, a, suscipit. A officiis iusto corrupti cum veniam inventore omnis doloribus aliquam asperiores repellendus unde itaque quae, repudiandae <maiores class=""></maiores>
+          </button>
         </div>
       </div>
     </div>

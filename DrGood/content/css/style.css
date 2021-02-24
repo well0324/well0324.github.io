@@ -576,6 +576,7 @@ footer .container .list-inline .list-inline-item a:hover{
   border: 1px solid #efefef;
 }
 .alert-light{
+  color: #001E2F;;
   border: 1px solid #efefef;
 }
 
@@ -765,18 +766,19 @@ footer .container .list-inline .list-inline-item a:hover{
   margin: 10px;
   width: 18px;
   height: 18px;
-  border: 1px solid #E7FDFF;
+  border: 1px solid rgb(0, 30, 47, 30%);
   border-radius: 12px;
   cursor: pointer;
   vertical-align: middle;
   /*box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;*/
   /*background-color: hsla(0,0%,0%,.2);*/
-  background-image: -webkit-radial-gradient( #015B8C 0%, #015B8C 15%, #015B8C 28%, #015B8C 70% );
+  background-image: -webkit-radial-gradient( #2AB5CD 0%, #2AB5CD 15%, #2AB5CD 28%, #2AB5CD 70% );
   background-repeat: no-repeat;
   -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1), -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
   outline: none;
 }
 .btn_choose_sent input:checked {
+  border: 1px solid #fff;
   -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
 }
 .btn_choose_sent input:active {
@@ -793,15 +795,15 @@ footer .container .list-inline .list-inline-item a:hover{
   background-position: 0 -24px;
 }
 .btn_choose_sent{
-    background: #2AB5CD;
-    color: #fff;
+    background: #E8F4F1;
+    color: #001E2F;
     box-shadow: none;
     border: none; 
     border-radius: 3px;
     font-size: 16px;
     line-height: 10px;
     padding:  16px 20px 16px 38px;
-    text-align: center;
+    text-align: left;
     display: inline-block;
     text-decoration: none;
     margin-right: 20px;
@@ -811,6 +813,9 @@ footer .container .list-inline .list-inline-item a:hover{
     position: relative;
     outline: none;
     margin-bottom: 15px;
+}
+.btn_choose_QA{
+  line-height: 1.5;
 }
 
 .btn_choose_sent input{
@@ -831,4 +836,28 @@ footer .container .list-inline .list-inline-item a:hover{
     /* z-index: -1; */
     height: 40px;
     top: -10px;
+}
+
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label::before {
+  content: "\f10b";
+  font-family: "bootstrap-icons";
+  font-size: 16px;
+  color: #a3b4b7;
+  cursor:pointer;
+  float: left;
+  margin-top: 1px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "\f26c";
+  font-family: "bootstrap-icons";
+  font-size: 16px;
+  color: #2ab5cd;
 }
