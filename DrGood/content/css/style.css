@@ -261,6 +261,15 @@ a.dropdown-item:hover{
 .btn.btn-google, .btn.btn-fb{
   height: 56px;
 }
+.btn-google{
+  color: #fff;
+  background-color: #DB4437;
+}
+.btn-fb{
+  color: #fff;  
+  background-color: #4267B2;
+}
+
 .btn .bi.bi-google::after, .btn .bi.bi-facebook::after{
   content: '';
   display: inline-block;
@@ -274,7 +283,7 @@ a.dropdown-item:hover{
   -webkit-backdrop-filter: blur(5px); 
   backdrop-filter: blur(5px); 
 }
-a.modal-search:link{
+a.modal-search, a.modal-search:link{
   color: #fff;
   font-size: 0.95rem;
   text-decoration: none;
