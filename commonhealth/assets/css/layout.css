@@ -424,6 +424,7 @@ a.logo:link{
 }
 .news-date{
 	width: 20%;
+	padding-right: 20px;
 }
 .news-source{
 	display: flex;
@@ -470,6 +471,10 @@ a.logo:link{
 	.news-info{
 		width: 100%;
 		font-size: 1.2em;
+	}
+	.media::before, .awarded::before, .memorabilia::before{
+		width: 26px;
+		height: 26px;
 	}
 }
 /*Member*/
@@ -540,6 +545,10 @@ a.logo:link{
 	.owl-carousel .item figure img{
 		opacity: 1;
 		filter: grayscale(0%);
+	}
+	.owl-carousel .item .item-body h3{
+		font-size: 1.2em;
+		font-weight: 700;
 	}
 }
 
