@@ -191,6 +191,9 @@ header{
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 60px;
 }
+a.logo, a.logo:link{
+	color: #fff;
+}
 .topnav {
 	display: inline-block;
 	padding-right: 1em;
