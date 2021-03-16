@@ -295,6 +295,7 @@ a.logo:link{
 		float: none;
 		display: block;
 		text-align: left;
+		font-size: 1.2em;
 	}
 
 	.fb span, .line span{
@@ -468,6 +469,7 @@ a.logo:link{
 	}
 	.news-info{
 		width: 100%;
+		font-size: 1.2em;
 	}
 }
 /*Member*/
@@ -486,10 +488,14 @@ a.logo:link{
 .owl-prev{
 	position: absolute;
 	left: -10px;
+	font-size: 2em;
+	color: #909090;
 }
 .owl-next{
 	position: absolute;
 	right: -10px;
+	font-size: 2em;
+	color: #909090;
 }
 .owl-carousel .item{
 	text-align: center;
@@ -530,6 +536,10 @@ a.logo:link{
 	}
 	.owl-carousel .item figure{
 		margin:50px 50px 20px 50px;
+	}
+	.owl-carousel .item figure img{
+		opacity: 1;
+		filter: grayscale(0%);
 	}
 }
 
