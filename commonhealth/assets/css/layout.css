@@ -312,7 +312,7 @@ a.logo:link{
 
 #banner {
 	position: relative;
-	padding: 22em 0 22em 0;
+	padding: 20em 0 18em 0;
 	background-color: #178CCB;
 	background-image: url("../../assets/images/banner.jpg");
 	background-size: cover;
@@ -362,35 +362,47 @@ a.logo:link{
 	padding: 0;
 	letter-spacing: 3px;
 	font-weight: 700;
+	width: 50%;
 }
 #banner p{
 	color: #fff;
+	width: 65%;
 }
 
 @media screen and (max-width: 1680px) {
 	#banner {
-		padding: 20em 0 20em 0;
+		padding: 16em 0 14em 0;
 	}
 }
 
 @media screen and (max-width: 1280px) {
 	#banner {
-		padding: 12em 0 12em 0;
+		padding: 12em 0 10em 0;
 	}
 }
 
 @media screen and (max-width: 980px) {
 	#banner {
-		padding: 8em 0 6em 0;
+		padding: 12em 0 10em 0;
+	}
+	#banner h1 {
+		width: 60%
+	}
+	#banner p{
+		width: 70%;
 	}
 }
 
 @media screen and (max-width: 736px) {
 	#banner {
-		padding: 4em 0 2em 0;
+		padding: 8em 0 6em 0;
 	}
 	#banner h1 {
 		font-size: 1.75em;
+		width: 55%
+	}
+	#banner p{
+		width: 70%;
 	}
 }
 
@@ -398,6 +410,9 @@ a.logo:link{
 	#banner {
 		padding: 5em 0 3em 0;
 		background-position: top left;
+	}
+	#banner h1, #banner p{
+		width: 100%;
 	}
 }
 
@@ -672,7 +687,7 @@ a.logo:link{
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline .arrows {
-  display: flex;
+  display: none;
   justify-content: center;
   margin-bottom: 20px;
 }
