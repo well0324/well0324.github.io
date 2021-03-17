@@ -312,12 +312,12 @@ a.logo:link{
 
 #banner {
 	position: relative;
-	padding: 13em 0 11em 0;
+	padding: 22em 0 22em 0;
 	background-color: #178CCB;
 	background-image: url("../../assets/images/banner.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 15% left;
+	background-position: top right;
 	text-align: left;
 	z-index: 9999;
 }
@@ -369,19 +369,19 @@ a.logo:link{
 
 @media screen and (max-width: 1680px) {
 	#banner {
-		padding: 10em 0 8em 0;
+		padding: 20em 0 20em 0;
 	}
 }
 
 @media screen and (max-width: 1280px) {
 	#banner {
-		padding: 8em 0 6em 0;
+		padding: 12em 0 12em 0;
 	}
 }
 
 @media screen and (max-width: 980px) {
 	#banner {
-		padding: 12em 0 10em 0;
+		padding: 8em 0 6em 0;
 	}
 }
 
@@ -397,6 +397,7 @@ a.logo:link{
 @media screen and (max-width: 480px) {
 	#banner {
 		padding: 5em 0 3em 0;
+		background-position: top left;
 	}
 }
 
