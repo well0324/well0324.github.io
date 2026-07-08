@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>石垣島 4天3夜｜10/31–11/3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+  :root{
+    --ocean:#0B4F6C;
+    --deep:#08344A;
+    --lagoon:#4FC7D6;
+    --sand:#F2E6CE;
+    --sand-light:#FAF4E6;
+    --coral:#E8734A;
+    --gold:#EFA93B;
+    --ink:#1B2E33;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--sand-light);
+    color:var(--ink);
+    font-family:'Noto Sans TC',sans-serif;
+    line-height:1.7;
+  }
+  h1,h2,h3{font-family:'Noto Serif TC',serif;margin:0;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg,var(--deep) 0%,var(--ocean) 55%,var(--lagoon) 100%);
+    color:#fff;
+    padding:64px 24px 90px;
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero .eyebrow{
+    letter-spacing:.35em;
+    font-size:12px;
+    color:var(--gold);
+    font-weight:700;
+  }
+  .hero h1{
+    font-size:clamp(38px,7vw,64px);
+    font-weight:900;
+    margin:14px 0 6px;
+    letter-spacing:.04em;
+  }
+  .hero .sub{font-size:16px;color:#DCEFF3;}
+  .hero .dates{
+    display:inline-block;margin-top:18px;
+    padding:8px 22px;border:1px solid rgba(255,255,255,.5);
+    border-radius:999px;font-size:14px;letter-spacing:.08em;
+  }
+  .wave{position:absolute;bottom:-1px;left:0;width:100%;line-height:0;}
+
+  .info-strip{
+    max-width:920px;margin:-46px auto 0;position:relative;z-index:2;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 20px;
+  }
+  .info-card{
+    background:#fff;border-radius:16px;padding:18px 16px;
+    box-shadow:0 10px 26px rgba(11,79,108,.15);
+    text-align:center;
+  }
+  .info-card .label{font-size:11px;letter-spacing:.15em;color:var(--coral);font-weight:700;}
+  .info-card .value{font-size:15px;font-weight:700;margin-top:6px;color:var(--deep);}
+
+  section{max-width:920px;margin:0 auto;padding:70px 20px;}
+  .section-title{
+    display:flex;align-items:baseline;gap:14px;margin-bottom:36px;
+  }
+  .section-title h2{font-size:28px;color:var(--deep);}
+  .section-title .line{flex:1;height:1px;background:linear-gradient(90deg,var(--coral),transparent);}
+
+  /* DAY CARDS */
+  .day{
+    display:grid;grid-template-columns:120px 1fr;gap:26px;
+    margin-bottom:54px;position:relative;
+  }
+  .day:not(:last-child)::after{
+    content:'';position:absolute;left:59px;top:120px;bottom:-54px;width:2px;
+    background:repeating-linear-gradient(180deg,var(--lagoon) 0 6px,transparent 6px 12px);
+  }
+  .day-badge{
+    width:120px;height:120px;border-radius:20px;
+    background:linear-gradient(160deg,var(--ocean),var(--lagoon));
+    color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 8px 18px rgba(11,79,108,.25);
+  }
+  .day-badge .d{font-size:12px;letter-spacing:.2em;opacity:.85;}
+  .day-badge .n{font-size:38px;font-weight:900;font-family:'Noto Serif TC',serif;}
+  .day-body{
+    background:#fff;border-radius:18px;padding:24px 26px;
+    box-shadow:0 6px 18px rgba(11,79,108,.08);
+  }
+  .day-title{font-size:20px;color:var(--deep);font-weight:700;margin-bottom:14px;}
+  .timeline-item{
+    display:grid;grid-template-columns:56px 1fr;gap:14px;padding:10px 0;
+    border-top:1px dashed #E5DCC6;
+  }
+  .timeline-item:first-of-type{border-top:none;}
+  .icon{
+    width:44px;height:44px;border-radius:12px;background:var(--sand);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .icon svg{width:26px;height:26px;}
+  .ti-time{font-size:12px;color:var(--coral);font-weight:700;letter-spacing:.05em;}
+  .ti-text{font-size:14.5px;color:var(--ink);}
+  .ti-text b{color:var(--deep);}
+
+  /* FOOD / SOUVENIR grid */
+  .chip-grid{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{
+    display:flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid #EADFC4;border-radius:999px;
+    padding:8px 16px;font-size:13.5px;box-shadow:0 3px 8px rgba(11,79,108,.05);
+  }
+  .chip svg{width:18px;height:18px;flex-shrink:0;}
+
+  /* BUDGET TABLE */
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(11,79,108,.08);}
+  th,td{padding:13px 16px;text-align:left;font-size:14px;}
+  th{background:var(--ocean);color:#fff;font-weight:500;letter-spacing:.05em;font-size:13px;}
+  tr:nth-child(even) td{background:var(--sand-light);}
+  td.amt{color:var(--coral);font-weight:700;text-align:right;}
+
+  /* CHECKLIST */
+  .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .check-item{
+    display:flex;align-items:center;gap:10px;background:#fff;
+    border-radius:12px;padding:12px 16px;box-shadow:0 3px 8px rgba(11,79,108,.06);
+    font-size:14px;
+  }
+  .check-item svg{width:20px;height:20px;flex-shrink:0;color:var(--coral);}
+
+  .booking{
+    background:linear-gradient(135deg,var(--coral),var(--gold));
+    border-radius:18px;padding:26px 28px;color:#fff;
+  }
+  .booking h3{font-size:18px;margin-bottom:10px;}
+  .booking ul{margin:0;padding-left:20px;font-size:14px;line-height:2;}
+
+  footer{
+    text-align:center;padding:40px 20px 60px;color:#8B9A9E;font-size:12.5px;
+  }
+
+  @media(max-width:640px){
+    .day{grid-template-columns:70px 1fr;}
+    .day-badge{width:70px;height:70px;border-radius:14px;}
+    .day-badge .n{font-size:22px;}
+    .day-badge .d{font-size:9px;}
+    .day:not(:last-child)::after{left:34px;}
+    .info-strip{grid-template-columns:1fr;}
+    .checklist{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="eyebrow">OKINAWA · YAEYAMA ISLANDS</div>
+  <h1>石垣島</h1>
+  <div class="sub">4 天 3 夜．南國潛旅計畫</div>
+  <div class="dates">10月31日 → 11月3日</div>
+  <svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="#FAF4E6" d="M0,60 C240,100 480,20 720,50 C960,80 1200,20 1440,55 L1440,100 L0,100 Z"/></svg>
+</div>
+
+<div class="info-strip">
+  <div class="info-card"><div class="label">航班</div><div class="value">IT736 / IT737</div></div>
+  <div class="info-card"><div class="label">住宿</div><div class="value">seven x seven 石垣</div></div>
+  <div class="info-card"><div class="label">交通</div><div class="value">建議全程租車</div></div>
+</div>
+
+<section>
+  <div class="section-title"><h2>逐日行程</h2><div class="line"></div></div>
+
+  <!-- DAY 1 -->
+  <div class="day">
+    <div class="day-badge"><div class="d">DAY</div><div class="n">01</div></div>
+    <div class="day-body">
+      <div class="day-title">抵達．市區探索</div>
+
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><path d="M2 16l6-2 5-8 2 1-3 7 6-1 3 3-8 2-3 5-2-1 2-5-8 1z"/></svg></div>
+        <div><div class="ti-time">抵達 → 租車 → 飯店寄放行李</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><path d="M4 10h16M6 10v9M18 10v9M4 19h16M8 10V6a4 4 0 018 0v4"/></svg></div>
+        <div><div class="ti-text"><b>午餐</b>：石垣牛專門店<br><span style="font-size:12.5px;color:#5B6E73;">推薦「石垣牛燒肉 石垣屋」（真栄里547-7．午餐11:30–14:00．套餐¥1,700起）或「炭火焼肉 たけさん亭」（浜崎町2-2-4．午餐11:30–14:00．整頭買進稀有部位，公休二、五）</span></div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><rect x="4" y="7" width="16" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
+        <div><div class="ti-text">逛街：<b>Euglena Mall</b>、公設市場</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><path d="M12 3l3 6h-6z"/><path d="M9 9h6l-1 12H10z"/></svg></div>
+        <div><div class="ti-text">義式冰淇淋「<b>寿五八</b>」（石垣市石垣14．Euglena Mall步行2分．12:00–22:00．週日、每月第2/4週一公休）</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><path d="M3 14c1.5 2 3.5 2 5 0s3.5-2 5 0 3.5 2 5 0 2.5-1 3-1"/><path d="M6 8a4 4 0 018 0M12 8h6"/></svg></div>
+        <div><div class="ti-text">飯店泳池放鬆</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><path d="M6 3v4M10 3v4M14 3v4M4 10h12M4 10v10a1 1 0 001 1h10a1 1 0 001-1V10"/></svg></div>
+        <div><div class="ti-text"><b>晚餐</b>：居酒屋「ひとし本店」（建議提前預約）</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day">
+    <div class="day-badge"><div class="d">DAY</div><div class="n">02</div></div>
+    <div class="day-body">
+      <div class="day-title">北部一次玩透：幻之島．川平灣．米原海灘</div>
+
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><circle cx="12" cy="12" r="6"/><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div>
+        <div><div class="ti-time">上午</div><div class="ti-text">幻之島登陸 ＋ 浮潛（或海龜浮潛行程．船通常從市區離島碼頭出發）</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><rect x="4" y="7" width="16" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
+        <div><div class="ti-time">午餐（二選一，皆在往川平的路線上）</div><div class="ti-text">
+          <b>MiruMiru本舖 本店</b>：新川1583-74．10:00–19:30（冬季至日落）．全年無休．漢堡／丼飯＋自家牧場冰淇淋<br>
+          <b>川平公園展望台餐廳</b>：川平灣旁邊吃邊賞海景．石垣牛漢堡約¥1,800、八重山麵約¥950
+        </div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><path d="M4 20l16-16M9 15l-5 5M15 9l5-5"/><path d="M4 20c3-3 3-6 0-9"/></svg></div>
+        <div><div class="ti-time">下午</div><div class="ti-text">川平灣：SUP 或透明獨木舟</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+        <div><div class="ti-time">傍晚前</div><div class="ti-text">順遊米原海灘 或 底地海灘戲水放空（都在川平灣周邊車程10–15分鐘，不必再另排一天專程跑北部）</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><path d="M9 18V6l10 6z"/><path d="M4 18V6"/></svg></div>
+        <div><div class="ti-time">晚上</div><div class="ti-text">開回市區．居酒屋「<b>うさぎや USAGIYA</b>」欣賞八重山島唄現場演出<br><span style="font-size:12.5px;color:#5B6E73;">石垣市石垣1-1中村ハイツ1F．17:00–23:00．三線島唄Live每晚19:00／21:00各一場．無公休．建議先訂位並避開Live時段用餐（18:45前或20:30後入場較順）</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day">
+    <div class="day-badge"><div class="d">DAY</div><div class="n">03</div></div>
+    <div class="day-body">
+      <div class="day-title">市區慢遊：酒造．鍾乳洞．伴手禮</div>
+
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#EFA93B" stroke-width="1.8"><path d="M9 2h6M10 2v4l-3 4v10a2 2 0 002 2h6a2 2 0 002-2V10l-3-4V2"/></svg></div>
+        <div><div class="ti-time">上午</div><div class="ti-text"><b>八重泉酒造</b>：泡盛導覽品酒（石垣市字石垣1834．9:00–16:00．公休六日．離島碼頭車程約10分鐘，市區內順路）</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#EFA93B" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 10c1-2 7-2 8 0M8 14c1 1 7 1 8 0"/></svg></div>
+        <div><div class="ti-time">午餐</div><div class="ti-text">八重山麵「<b>島そば一番地</b>」（石垣市石垣1-1，市役所正對面，離八重泉酒造約5分鐘車程．11:00–15:30／18:00–21:30，木曜僅營業日間．全年幾乎無休）．自家製麵、無化學調味料湯頭，招牌「コッキそば」份量足</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#EFA93B" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 3v6l-3 9h14l-3-9V3"/></svg></div>
+        <div><div class="ti-time">午後</div><div class="ti-text"><b>石垣島鍾乳洞</b>（石垣市石垣1666．9:00–18:30，最後入場18:00．門票大人¥1,200／兒童¥600．離島碼頭車程約10分鐘，緊鄰酒造）．洞內全年涼爽，附設餐廳11:00–15:00可順道用餐</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#EFA93B" stroke-width="1.8"><rect x="4" y="7" width="16" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div>
+        <div><div class="ti-text">回市區逛街採買伴手禮：Euglena Mall、公設市場</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#EFA93B" stroke-width="1.8"><path d="M6 3v4M10 3v4M14 3v4M4 10h12M4 10v10a1 1 0 001 1h10a1 1 0 001-1V10"/></svg></div>
+        <div><div class="ti-time">晚餐</div><div class="ti-text"><b>大眾酒場 魚仁</b>（石垣市石垣7-3．18:00–翌0:00．市役所步行3分）．每日築地／豐洲直送鮮魚刺身，也吃得到石垣牛、山羊刺身，觀光客友善多語菜單</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day">
+    <div class="day-badge"><div class="d">DAY</div><div class="n">04</div></div>
+    <div class="day-body">
+      <div class="day-title">賦歸</div>
+      <div class="timeline-item">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><path d="M4 10h16M6 10v9M18 10v9M4 19h16M8 10V6a4 4 0 018 0v4"/></svg></div>
+        <div><div class="ti-text">早餐 → 還車 → 搭乘 IT737 返台</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="section-title"><h2>必嚐美食</h2><div class="line"></div></div>
+  <div class="chip-grid">
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><rect x="3" y="9" width="18" height="9" rx="2"/><path d="M7 9V6a5 5 0 0110 0v3"/></svg>石垣牛</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 10c1-2 7-2 8 0M8 14c1 1 7 1 8 0"/></svg>八重山麵</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><circle cx="7" cy="8" r="2"/><circle cx="17" cy="8" r="2"/><circle cx="12" cy="14" r="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>海葡萄</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>島豆腐</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#0B4F6C" stroke-width="1.8"><path d="M12 3l3 6h-6z"/><path d="M9 9h6l-1 12H10z"/></svg>Blue Seal 冰淇淋</div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="section-title"><h2>伴手禮清單</h2><div class="line"></div></div>
+  <div class="chip-grid">
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><path d="M9 2h6M10 2v4l-3 4v10a2 2 0 002 2h6a2 2 0 002-2V10l-3-4V2"/></svg>泡盛</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>黑糖</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>石垣辣油</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><rect x="4" y="8" width="16" height="10" rx="2"/><path d="M8 8V6a4 4 0 018 0v2"/></svg>鹽金楚糕</div>
+    <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.8"><path d="M6 3l1 3h10l1-3M4 9h16l-1 12H5z"/></svg>限定零食</div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="section-title"><h2>預算概估（每人）</h2><div class="line"></div></div>
+  <table>
+    <tr><th>項目</th><th style="text-align:right;">金額</th></tr>
+    <tr><td>租車</td><td class="amt">¥30,000 – 45,000</td></tr>
+    <tr><td>油資</td><td class="amt">¥3,000</td></tr>
+    <tr><td>餐飲</td><td class="amt">¥15,000 – 25,000</td></tr>
+    <tr><td>水上活動（每項）</td><td class="amt">¥8,000 – 15,000</td></tr>
+    <tr><td>酒廠購物</td><td class="amt">依需求</td></tr>
+  </table>
+</section>
+
+<section style="padding-top:0;">
+  <div class="section-title"><h2>行李檢查</h2><div class="line"></div></div>
+  <div class="checklist">
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>泳衣</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>防曬</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>防水袋</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>拖鞋</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>駕照正本＋日文譯本／國際駕照</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>行動電源</div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="booking">
+    <h3>提前 1–2 個月預約</h3>
+    <ul>
+      <li>幻之島浮潛行程</li>
+      <li>SUP／透明獨木舟</li>
+      <li>ひとし本店（居酒屋）</li>
+      <li>八重泉酒造導覽</li>
+    </ul>
+  </div>
+</section>
+
+<footer>石垣島 4天3夜行程規劃 · 10/31 – 11/3</footer>
+
+</body>
+</html>
